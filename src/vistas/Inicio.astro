@@ -128,16 +128,21 @@ if (casos.length && destacados.length < 2) avisar(`Inicio (${idioma}): hay ${des
     .heroe-rejilla {
       display: grid;
       grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-      align-items: center;
+      align-items: stretch;
       gap: var(--e6);
       padding-block: var(--e8);
     }
     .heroe-ilustracion {
       order: 0;
+      position: relative;
+      min-height: 0;
     }
     .heroe-ilustracion :global(img) {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
       max-height: none;
-      aspect-ratio: 824 / 672;
       object-position: center;
     }
     h1 {
