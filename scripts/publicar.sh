@@ -13,6 +13,9 @@ rm -rf .git
 git init -q -b gh-pages
 git add -A
 git -c user.name="Valeria Garzón Triana" -c user.email="valeria.garzont@gmail.com" commit -q -m "Publicación $(date '+%Y-%m-%d %H:%M')"
-git push -q -f "$REMOTO" gh-pages
+# Usa la cuenta personal ValeriaGT aunque la cuenta activa de gh sea otra
+git -c credential.https://github.com.helper= \
+    -c credential.https://github.com.helper='!f() { test "$1" = get && echo username=ValeriaGT && echo "password=$(gh auth token -u ValeriaGT)"; }; f' \
+    push -q -f "$REMOTO" gh-pages
 rm -rf .git
 echo "Listo: en uno o dos minutos se ve en https://valeriagt.github.io/portafolio/"
