@@ -771,7 +771,8 @@ body{padding-bottom:88px}
    El escritorio está posicionado en absoluto sobre 1440 px y no admite
    reflow, así que el móvil es un render propio sobre el MISMO `state`.
    ══════════════════════════════════════════════════════════════════ */
-#devbar{display:flex;justify-content:center;gap:4px;padding:12px 0 4px;background:#F7F7F7}
+#devbar{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:1000;display:flex;justify-content:center;gap:4px;padding:0;background:transparent;pointer-events:none}
+#devbar .seg{pointer-events:auto;box-shadow:0 6px 24px rgba(2,4,38,.25)}
 #devbar .seg{display:inline-flex;background:#fff;border:1px solid var(--n03);
   border-radius:100px;padding:3px;box-shadow:var(--sk-input)}
 #devbar button{border:0;background:transparent;cursor:pointer;border-radius:100px;
@@ -781,9 +782,9 @@ body{padding-bottom:88px}
 #devbar button:not(.on):hover{background:var(--n03)}
 #devbar svg{width:15px;height:15px}
 
-#mobWrap{display:none;justify-content:center;padding:16px 0 40px;background:#F7F7F7}
+#mobWrap{display:none;justify-content:center;padding:24px 0 88px;background:#F7F7F7;min-height:100vh;box-sizing:border-box}
 #mobWrap.on{display:flex}
-#mobFrame{width:375px;height:812px;background:#fff;border-radius:44px;position:relative;
+#mobFrame{width:375px;height:min(812px, calc(100vh - 120px));min-height:560px;background:#fff;border-radius:44px;position:relative;
   box-shadow:0 0 0 10px #232323, 0 20px 60px rgba(0,0,0,.30);overflow:hidden;
   display:flex;flex-direction:column}
 #mobFrame .notch{position:absolute;top:8px;left:50%;transform:translateX(-50%);
@@ -3408,7 +3409,7 @@ function reset(){
    estirar la pantalla a mano o queda recortado.
    ─────────────────────────────────────────────────────────────── */
 function fit(){
-  const s = Math.min(1, window.innerWidth / 1440);
+  const s = window.innerWidth / 1440;   // pantalla completa: también crece en pantallas grandes
   const stage = document.getElementById('stage');
   stage.style.transform = `scale(${s})`;
 

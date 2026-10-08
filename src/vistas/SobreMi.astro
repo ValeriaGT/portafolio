@@ -131,10 +131,30 @@ const linkedinTexto = data.linkedin?.replace(/^https?:\/\/(www\.)?/, '').replace
           }
         </ol>
       </section>
+    </div>
+  </div>
 
-      <section id="contacto" class="contacto" aria-labelledby="t-contacto">
+  <section class="certificaciones" aria-labelledby="t-cert">
+    <div class="contenedor">
+      <h2 id="t-cert" class="rotulo">{t.certificaciones}</h2>
+      <ul>
+        {
+          data.certificaciones.map((c) => (
+            <li>
+              <strong>{c.nombre}</strong> · {c.entidad}, {c.fecha}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <section id="contacto" class="contacto sobre-oscuro" aria-labelledby="t-contacto">
+    <div class="contenedor contacto-rejilla">
+      <div>
         <h2 id="t-contacto" class="rotulo">{t.contacto}</h2>
         <p class="contacto-intro">{t.contactoIntro}</p>
+      </div>
         <dl>
           {
             data.correo && (
@@ -169,22 +189,6 @@ const linkedinTexto = data.linkedin?.replace(/^https?:\/\/(www\.)?/, '').replace
             )
           }
         </dl>
-      </section>
-    </div>
-  </div>
-
-  <section class="certificaciones" aria-labelledby="t-cert">
-    <div class="contenedor">
-      <h2 id="t-cert" class="rotulo">{t.certificaciones}</h2>
-      <ul>
-        {
-          data.certificaciones.map((c) => (
-            <li>
-              <strong>{c.nombre}</strong> · {c.entidad}, {c.fecha}
-            </li>
-          ))
-        }
-      </ul>
     </div>
   </section>
 </Base>
@@ -325,19 +329,35 @@ const linkedinTexto = data.linkedin?.replace(/^https?:\/\/(www\.)?/, '').replace
     gap: 4px;
     color: var(--gris);
   }
+  /* Contacto: franja oscura al final, funciona como pie de la hoja de vida */
   .contacto {
     scroll-margin-top: var(--e3);
+    background: var(--marino);
+    color: var(--texto-claro);
+    padding-block: var(--e8) var(--e6);
+  }
+  .contacto-rejilla {
+    display: grid;
+    gap: var(--e4);
+  }
+  @media (min-width: 1024px) {
+    .contacto-rejilla {
+      grid-template-columns: 320px minmax(0, 1fr);
+      gap: var(--e8);
+      align-items: start;
+    }
   }
   .contacto-intro {
     font-family: var(--titulos);
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: 700;
-    margin-bottom: var(--e3);
+    line-height: 1.2;
+    color: var(--blanco);
   }
   .contacto dl {
     margin: 0;
     display: grid;
-    gap: var(--e2) var(--e4);
+    gap: var(--e3) var(--e4);
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
   }
   .contacto dt {
@@ -346,11 +366,19 @@ const linkedinTexto = data.linkedin?.replace(/^https?:\/\/(www\.)?/, '').replace
     font-size: 0.75rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--gris);
+    color: var(--morado);
+    margin-bottom: 4px;
   }
   .contacto dd {
     margin: 0;
     overflow-wrap: anywhere;
+    color: var(--blanco);
+  }
+  .contacto dd a {
+    color: var(--blanco);
+  }
+  .contacto dd a:hover {
+    color: var(--lavanda);
   }
   .certificaciones {
     margin-top: var(--e10);

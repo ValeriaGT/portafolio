@@ -151,6 +151,26 @@ A [clickable prototype](../../../prototipos/gestion-portafolios/index.html) of t
 
 **The size of the opportunity.** Clients who can manage their portfolio and don't are about 12 times those who do: a potential 12x growth in adoption. Getting there requires bringing each client's segment, profile and actual allocation together in one place: without that data, neither the segmented message of "I reach out" nor the comparison of "I make it easy" can exist.
 
+### Next iteration: a cycle with the advisor (not tested)
+
+Based on the review findings, I designed a two-lane journey, **client and advisor**, for people just starting to invest: people who already have a portfolio but don't review it on their own. It isn't a screen redesign: it's a cycle that turns silence ("I've never managed my portfolio") into a monthly review habit. The advisor isn't just another channel, they close the loop.
+
+It has 7 recurring moments:
+
+0. **Starting point.** The client has a portfolio but has never managed it. The system starts counting from onboarding, a data point that doesn't exist today.
+1. **Day 30 without managing.** The client gets a short, jargon-free message with a direct button to manage, plus a 3-step video if they don't know how. The advisor gets the same alert to follow up.
+2. **First management.** The client decides in plain language and the advisor's task closes on its own.
+3. **"How you did this month".** A monthly summary whether it goes up or down, to build a habit, not just a reaction.
+4. **Performance alert.** If returns drop over time and the client doesn't react, they get an educational video, and the advisor gets the same alert. The content is flagged as informational, not advice.
+5. **Manage again.** They see how each portfolio performed and what it's invested in, with optional detail for those who know more.
+6. **Advisor view.** A dashboard with the status of their whole book (up to date, never managed, losing returns) to decide who to call first.
+
+![Journey moments 0 to 2: starting point, day 30 without managing and first management, each showing what happens for the client, the system and the advisor. In Spanish](./07-journey-momentos-0-2.png)
+
+![Journey moments 3 to 6: monthly summary, performance alert with a regulatory note, managing again and the advisor dashboard, with the cycle returning to moment 3 every month. In Spanish](./08-journey-momentos-3-6.png)
+
+This iteration responds to what the synthetic agents asked for: a person at the moment of greatest doubt, alerts that arrive before the client gets lost, and plain language. **It wasn't tested.** Before production, business and legal need to validate the window that triggers the performance alert, each alert's default channel and the final video script.
+
 ## Learnings
 
 - **The problem wasn't the interface, it was the relationship.** The data showed people came in once and didn't return. Better screens weren't enough: they needed a reason to come back and support between one transaction and the next.

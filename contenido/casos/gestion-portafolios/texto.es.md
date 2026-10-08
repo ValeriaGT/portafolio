@@ -153,6 +153,26 @@ Un [prototipo navegable](../../prototipos/gestion-portafolios/index.html) del mo
 
 **El tamaño de la oportunidad.** Los clientes que pueden gestionar su portafolio y no lo hacen son unas 12 veces los que sí lo hacen: un potencial de crecimiento de 12x en adopción. Para lograrlo hace falta integrar en un mismo lugar el segmento, el perfil y la composición real de cada cliente: sin ese dato no existen ni el mensaje segmentado del "Te llamo" ni el comparador del "Te lo hago fácil".
 
+### Siguiente iteración: un ciclo con el asesor (sin testear)
+
+A partir de los hallazgos de la revisión diseñé un journey de dos carriles, **cliente y asesor**, para quienes están empezando a invertir: personas que ya tienen un portafolio, pero no lo revisan por iniciativa propia. No es un rediseño de pantallas: es un ciclo que convierte el silencio ("nunca he entrado a gestionar") en un hábito de revisión mensual. El asesor no es un canal más, es quien cierra el ciclo.
+
+Son 7 momentos que se repiten:
+
+0. **Punto de partida.** El cliente tiene portafolio pero nunca ha gestionado. El sistema empieza a contar desde la vinculación, un dato que hoy no existe.
+1. **Día 30 sin gestionar.** El cliente recibe un mensaje corto, sin jerga, con un botón directo a gestionar y un video de 3 pasos si no sabe cómo. El asesor recibe la misma alerta para hacer seguimiento.
+2. **Primera gestión.** El cliente decide en lenguaje simple y la tarea del asesor se cierra sola.
+3. **"Así te fue este mes".** Un resumen mensual igual suba o baje, para construir hábito y no solo reacción.
+4. **Alerta de rendimiento.** Si pierde rentabilidad de forma sostenida y no reacciona, recibe un video educativo, y el asesor recibe la misma alerta. El contenido se marca como informativo, no como asesoría.
+5. **Gestiona de nuevo.** Ve cuánto rentó cada portafolio y en qué está invertido, con detalle opcional para quien sabe más.
+6. **Vista del asesor.** Un tablero con el estado de toda su cartera (al día, nunca gestionó, perdiendo rentabilidad) para decidir a quién llamar primero.
+
+![Momentos 0 a 2 del journey: punto de partida, día 30 sin gestionar y primera gestión, cada uno con lo que pasa para el cliente, el sistema y el asesor](./07-journey-momentos-0-2.png)
+
+![Momentos 3 a 6 del journey: resumen mensual, alerta de rendimiento con nota regulatoria, nueva gestión y tablero del asesor, con el ciclo que vuelve al momento 3 cada mes](./08-journey-momentos-3-6.png)
+
+Esta iteración responde a lo que pidieron los agentes sintéticos: una persona en el momento de mayor duda, avisos que llegan antes de que el cliente se pierda y lenguaje simple. **No alcanzó a testearse.** Antes de producción hay que validar con negocio y legal la ventana que dispara la alerta de rendimiento, el canal por defecto de cada aviso y el texto final del video.
+
 ## Aprendizajes
 
 - **El problema no era la interfaz, era la relación.** Los datos mostraban que la gente entraba una vez y no volvía. Mejorar pantallas no bastaba: había que darles una razón para volver y acompañarlos entre una operación y la siguiente.

@@ -1,0 +1,111 @@
+---
+# Translated from texto.es.md. Delete the "traduccion" line once you've reviewed it.
+traduccion: por revisar
+titulo: Catbyte
+bajada: A platform to build your ideal computer, understand it and make it your own
+rol: Research, analysis and proposal (as a pair)
+resumen: UX/UI bootcamp project. An online store for custom computers, consoles and geek products, with step-by-step guidance so even people who don't know about hardware can make good decisions.
+origen: UX/UI Design Bootcamp · BIT - Bogotá Institute of Technology
+periodo: "[PENDING: month and year]"
+equipo: Valeria Garzón and Lianna González
+portada: ./01-portada.jpg
+portadaAlt: Catbyte project cover, with the logo of a cat biting a game controller and the names Valeria Garzón and Lianna González.
+destacado: false
+orden: 5
+---
+
+## Summary
+
+Catbyte is a proposal for a trustworthy, appealing platform to buy custom computers (built around each person's needs and taste), consoles, controllers and geek and otaku products. What sets it apart is step-by-step guidance, so even people who don't know about hardware can make good decisions.
+
+I developed it with Lianna González in the UX/UI Design Bootcamp at BIT: interviews, benchmarking of five competitors, user personas, empathy maps and a survey, which led to the value proposition and the key features.
+
+> This platform doesn't just sell computers, it helps people understand them, build them and make them their own.
+
+## Context and problem
+
+Many people want a PC or a console, but don't know which components to choose or where to buy safely. The console and PC market in Colombia is full of unreliable sites with little guidance.
+
+The proposal aimed for impact on three fronts:
+
+- **Transparency and trust** in a market where customers often don't understand what they're buying.
+- **A local alternative** that combines e-commerce with tech education and taste, narrowing the digital divide.
+- **Access** to the right equipment for work, study or gaming without overpaying.
+
+## Research
+
+**Interviews.** We talked to people aged 20 to 30, students in creative and technical fields such as digital communication, visual design and architecture, who look for tools to perform well in those areas.
+
+- They use their computer every day to study, design, illustrate and edit, and need good processing power and graphics performance.
+- They've bought "gaming" or mid-to-high-end machines that later felt overpriced or quickly fell short.
+- Information is scattered, incomplete and poorly suited to their real needs.
+- They didn't feel guided when buying. They'd like advice on which machine or components fit their use and budget.
+- They're frustrated by stock shortages, confusing technical information, unclear pricing and having to buy parts in different places.
+
+![Interview results: user profile and answers about computer use, last purchase, information sources, doubts and frustrations. In Spanish](./02-entrevistas.jpg)
+
+**Benchmarking.** We analyzed Origin PC, Aftershock, Versus, Alienware and Maingear across strengths, weaknesses, navigation, vocabulary and design. The conclusions:
+
+- Custom PC sites are aspirational and visual, but give little guidance to people who don't know about hardware and rarely show the inside of the product.
+- Versus is clear and objective for comparing, but doesn't sell or guide. The opportunity was to merge a comparison tool's technical clarity with the brands' aspirational, personalized feel.
+- Big brands focus on high-budget gamers, often in English and with prices in dollars, which creates barriers for the Colombian market.
+
+![Analysis of Origin Custom Labs, one of the five competitors: strengths, weaknesses, navigation, vocabulary, design and conclusions. In Spanish](./03-benchmark-origin.jpg)
+
+**User personas and empathy maps.** We built two personas from the interviews: a designer who wants to compare computers "without getting tangled up in so many specs" and a designer for whom "there's always something missing from the ideal computer". Their empathy maps agree: they look for efficiency, comfort and aesthetics, are frustrated by prices and their lack of technical knowledge, and distrust sellers.
+
+![Empathy map with what the persona hears, thinks and feels, sees, says and does, their pains and the outcomes they seek. In Spanish](./04-mapa-empatia.jpg)
+
+**Survey.** More than 80% of respondents buy technology at least once a year.
+
+| Biggest obstacle when buying | % |
+| --- | --- |
+| High prices | 34.5% |
+| Complexity of use | 20.8% |
+| Part compatibility issues | 17.3% |
+| Lack of trust in sellers | 17% |
+| Not being able to see the product in person | 10.4% |
+
+- **Preferred guidance:** 50% want a mix of automated guidance and a human advisor, 33.3% a human advisor and 16.7% prefer to do it on their own. Nobody chose only a chatbot or only a step-by-step guide.
+- **Building a PC:** 41.7% have already built or bought a custom one and 58.3% haven't, but would like to.
+- **Most useful tools:** an automatic quote with the total price in real time, recommendations by use and budget, a component comparison and a 3D preview of the final design.
+- **What would build trust:** clear warranties and tech support, expert advice and transparent pricing.
+
+![Survey results: obstacles when buying technology, preferred type of guidance and whether they've built a custom PC. In Spanish](./05-encuesta.jpg)
+
+## Design process
+
+Two needs from the research shaped the proposal:
+
+1. **They want a PC but don't know what to choose.** Answer: an interactive configurator where you pick what the machine is for (gaming, study, design or office) and get a recommended build in seconds.
+2. **They don't trust where to buy.** Answer: transparent prices, warranty and clear guidance for every product.
+
+Catbyte's identity, a gamer cat with an urban look and neon accents, was designed to connect with a young, creative and geek audience, in contrast with the cold look of high-performance brands.
+
+[PENDING: whether there was information architecture, wireframes or a prototype after the proposal]
+
+## Validation
+
+The survey validated the needs and prioritized the features: most people prefer hybrid guidance, between AI and a human, and the best-rated tools were the real-time quote, recommendations by use and budget, and the comparison.
+
+[PENDING: whether the proposal or a prototype was tested with users]
+
+## Final solution
+
+A platform to:
+
+- **Buy everything in one place**, with warranty and support.
+- **Choose each component:** CPU, GPU, RAM, case, lighting and peripherals.
+- **Get smart guidance**, from AI and a human expert, that ensures compatibility and performance.
+- **Preview the computer in 3D**, with its design and total price in real time.
+- **Filter by budget or use profile**, from student to gamer or designer.
+
+![Catbyte's proposal: buy everything in one place with warranty, choose each component, AI plus human guidance, 3D preview with real-time price and filters by budget or use profile. In Spanish](./06-propuesta.jpg)
+
+## Learnings
+
+- **Trust weighs as much as price.** Price was the most mentioned obstacle, but lack of trust, complexity and compatibility together outweigh it. A tech store sells peace of mind, not just machines.
+- **People want help, but not in just one form.** Nobody chose only a chatbot or only a guide. Hybrid AI-plus-human guidance came from the data, not from an assumption.
+- **Benchmarking is for finding gaps, not for copying.** No competitor combined technical clarity with aspiration and guidance. That gap became the value proposition.
+- **Combining interviews and a survey.** The interviews explained why people were frustrated; the survey helped prioritize what to build first.
+- **Working as a pair.** Splitting the research and comparing readings with Lianna made the conclusions stronger.

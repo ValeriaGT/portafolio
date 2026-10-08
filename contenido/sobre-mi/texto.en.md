@@ -5,8 +5,8 @@ roles:
   - Product Designer UX/UI
   - Product Owner
 # Positioning line on the Home page (taken from the professional summary)
-frase: I design digital products by combining user research, usability testing, data analysis in Databricks and backlog management to decide what to iterate on first.
-alcance: 5+ years of experience in digital product design across fintech, proptech and B2B portals.
+frase: I design digital products for fintech, proptech and B2B platforms, combining user research, usability testing and data analysis to guide design and prioritization decisions.
+alcance: 5+ years of experience. At Skandia I led research and the backlog for the finfluencer MVP, and the client portal redesign to improve adoption and return visits, hand in hand with business and engineering.
 ubicacion: Bogotá, Colombia
 telefono: +57 350 528 7642
 correo: valeria.garzont@gmail.com
