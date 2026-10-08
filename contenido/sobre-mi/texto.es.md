@@ -2,11 +2,11 @@
 # Fuente: Valeria-Garzon-Hoja-de-vida-estilizada-ES.html
 nombre: Valeria Garzón Triana
 roles:
-  - Product Designer UX/UI
-  - Product Owner
+  - Product Designer
+  - Diseñadora UX/UI
 # Frase de posicionamiento del Inicio (tomada del resumen profesional)
-frase: Diseño productos digitales para fintech, proptech y plataformas B2B, combinando investigación de usuarios, pruebas de usabilidad y análisis de datos para orientar el diseño y la priorización.
-alcance: Más de cinco años de experiencia. En Skandia lideré la investigación y el backlog del MVP para finfluencers, y el rediseño del portal de clientes para mejorar su adopción y recurrencia, de la mano con negocio e ingeniería.
+frase: Diseño experiencias digitales que ayudan a las personas a entender, decidir y actuar. Conecto investigación, diseño de interfaces y objetivos de negocio en productos fintech y B2B.
+alcance: Más de 5 años de experiencia en fintech, proptech y plataformas B2B. En Skandia llevé una plataforma de asesoría digital desde la investigación hasta producción, junto a negocio e ingeniería.
 ubicacion: Bogotá, Colombia
 telefono: +57 350 528 7642
 correo: valeria.garzont@gmail.com
@@ -87,4 +87,8 @@ certificaciones:
   - { nombre: Scrum Master y Product Owner, entidad: CertiProf, fecha: may 2020 }
 ---
 
-Product Designer UX/UI y Product Owner con más de 5 años de experiencia en diseño de producto digital en fintech, proptech y portales B2B. Diseño plataformas digitales fintech combinando investigación de usuarios, pruebas de usabilidad, análisis de datos en Databricks y gestión de backlog, para decidir qué iterar primero. Trabajo de la mano con negocio y desarrollo, y prototipo con Figma y Claude Code para validar ideas más rápido.
+Soy Product Designer y diseñadora UX/UI con más de 5 años de experiencia en fintech, proptech y plataformas B2B. Mi trabajo conecta lo que las personas necesitan con lo que el negocio busca lograr: investigo, organizo flujos, diseño interfaces y pruebo las propuestas con usuarios.
+
+En Skandia participé desde la exploración del problema hasta el lanzamiento de una plataforma para asesores digitales. También analizo datos de comportamiento para identificar fricciones y orientar nuevas propuestas. Trabajo con negocio e ingeniería para convertir los hallazgos en decisiones de diseño y acompañar su implementación.
+
+Mi experiencia como Product Owner aporta criterio para priorizar y definir el alcance. Uso Figma y prototipado asistido por IA para explorar soluciones; la validación con usuarios es la que permite comprobar si funcionan.

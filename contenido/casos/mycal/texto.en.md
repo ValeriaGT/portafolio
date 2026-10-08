@@ -10,6 +10,7 @@ portada: ./01-wireframes-calendario.png
 portadaAlt: Three myCal wireframes. The calendar in the Bogotá time zone, the same calendar in Buenos Aires time showing each meeting's time and local time, and the Create event form with location, time and reminder.
 destacado: false
 orden: 6
+estado: Hiring exercise · Wireframes, no user testing
 ---
 
 ## Summary

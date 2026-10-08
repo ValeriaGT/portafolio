@@ -11,7 +11,8 @@ herramientas: [Maze, WordPress]
 portada: ./05-misiones.png
 portadaAlt: Pantalla de inicio de Go by Skandia con la barra de créditos, las misiones de la semana y el calendario de agendamientos.
 destacado: true
-orden: 3
+orden: 1
+estado: Producto en producción · Pruebas con 8 usuarios
 ---
 
 ## Resumen
@@ -123,7 +124,9 @@ Lo que dijeron los usuarios:
 - "En Estadísticas está excelente que muestre el aumento en la relación con el cliente."
 - "La plataforma confunde al no hacer nada cuando seleccionas alguna opción."
 
-**Conclusión:** la plataforma se percibe como útil. Las calificaciones más bajas se debieron a la falta de familiaridad con Maze, no a los flujos.
+**Interpretación:** las respuestas sugieren utilidad percibida en esta muestra de 8 usuarios. El comentario sobre opciones que no responden señala un problema que requiere revisión. Con esta evidencia no se puede atribuir la fricción únicamente a Maze ni concluir que los flujos estén resueltos.
+
+**Alcance del resultado:** la plataforma llegó a producción. Las calificaciones anteriores corresponden a pruebas del prototipo; este caso no documenta una comparación antes/después de productividad, conversión o retención en producción.
 
 ## Solución final
 

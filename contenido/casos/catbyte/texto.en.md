@@ -11,7 +11,9 @@ equipo: Valeria Garzón and Lianna González
 portada: ./01-portada.jpg
 portadaAlt: Catbyte project cover, with the logo of a cat biting a game controller and the names Valeria Garzón and Lianna González.
 destacado: false
+borrador: true
 orden: 5
+estado: Bootcamp project · Research and proposal
 ---
 
 ## Summary

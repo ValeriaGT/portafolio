@@ -12,7 +12,8 @@ portada: ./02-okrs-completos.png
 portadaAlt: Pantalla de OKRs de Acelera con un banner verde que dice "Tus OKRs ya están completos — crea un proyecto en el Roadmap Estratégico" y un botón para ir al Roadmap.
 prototipo: https://valeriagt.github.io/acelera-prototipo/
 destacado: true
-orden: 1
+orden: 3
+estado: Proyecto formativo · Experimento diseñado, sin ejecutar
 ---
 
 ## Resumen
@@ -29,7 +30,6 @@ Tener las funcionalidades disponibles no significa necesariamente que formen par
 
 - **98%** completa el onboarding.
 - **73,1%** de las sesiones ocurre en OKRs, la funcionalidad más utilizada.
-- [PENDIENTE: confirmar cómo leer el dato "-5%" de "Otros módulos explorados por los usuarios"]
 
 **Oportunidad:** el 88% de las licencias no se convierte aún en usuarios recurrentes. De 1.715 usuarios base con licencia activa (no read-only), 200 son usuarios activos mensuales (MAU), es decir, el 11,66%.
 

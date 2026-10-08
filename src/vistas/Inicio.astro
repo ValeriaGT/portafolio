@@ -4,7 +4,7 @@ import Base from '../layouts/Base.astro';
 import TarjetaCaso from '../components/TarjetaCaso.astro';
 import { textos, type Idioma } from '../i18n/textos';
 import { casosDe, sobreMiDe, avisar } from '../lib/contenido';
-import { banner } from '../lib/archivos';
+import { banner, hojaDeVida } from '../lib/archivos';
 import { ruta } from '../lib/rutas';
 
 interface Props {
@@ -13,6 +13,7 @@ interface Props {
 const { idioma } = Astro.props;
 const t = textos[idioma];
 const { data } = await sobreMiDe(idioma);
+const pdf = hojaDeVida(idioma);
 const casos = await casosDe(idioma);
 const destacados = casos.filter((c) => c.data.destacado).slice(0, 3);
 if (casos.length && destacados.length < 2) avisar(`Inicio (${idioma}): hay ${destacados.length} caso(s) con "destacado: true"; lo ideal son 2 o 3.`);
@@ -27,8 +28,9 @@ if (casos.length && destacados.length < 2) avisar(`Inicio (${idioma}): hay ${des
         {data.frase ? <p class="heroe-frase">{data.frase}</p> : <p class="pendiente">{t.pendiente}</p>}
         {data.alcance && <p class="heroe-alcance">{data.alcance}</p>}
         <div class="botones">
-          <a class="boton boton-primario" href={`${ruta(idioma, 'sobreMi')}#contacto`}>{t.contactar}</a>
-          <a class="boton boton-secundario" href={ruta(idioma, 'casos')}>{t.verCasos}</a>
+          <a class="boton boton-primario" href="#titulo-destacados">{t.verCasos}</a>
+          <a class="boton boton-secundario" href={`${ruta(idioma, 'sobreMi')}#contacto`}>{t.contactar}</a>
+          {pdf && <a class="boton boton-secundario" href={pdf} download>{t.descargarCV}</a>}
         </div>
       </div>
       {

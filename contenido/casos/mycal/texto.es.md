@@ -13,6 +13,7 @@ portada: ./01-wireframes-calendario.png
 portadaAlt: Tres wireframes de myCal. El calendario en la zona horaria de Bogotá, el mismo calendario en hora de Buenos Aires con la hora de cada reunión y la hora local, y el formulario Crear evento con ubicación, horario y recordatorio.
 destacado: false
 orden: 6
+estado: Ejercicio de selección · Wireframes sin pruebas con usuarios
 ---
 
 ## Resumen

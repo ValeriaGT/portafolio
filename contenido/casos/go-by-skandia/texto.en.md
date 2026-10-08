@@ -12,7 +12,8 @@ herramientas: [Maze, WordPress]
 portada: ./05-misiones.png
 portadaAlt: Go by Skandia home screen with the credits bar, the week's missions and the appointment calendar.
 destacado: true
-orden: 3
+orden: 1
+estado: Live product · Tested with 8 users
 ---
 
 ## Summary
@@ -124,7 +125,9 @@ What users said:
 - "In Statistics, it's great that it shows the growth in the relationship with the client."
 - "The platform is confusing when nothing happens after you select an option."
 
-**Conclusion:** the platform is perceived as useful. The lower ratings came from unfamiliarity with Maze, not from the flows.
+**Interpretation:** responses suggest perceived usefulness in this sample of 8 users. The comment about options that do not respond points to an issue that needs review. This evidence does not establish that Maze alone caused the friction or that the flows are fully resolved.
+
+**Outcome scope:** the platform reached production. The ratings above come from prototype testing; this case does not document a before/after comparison of productivity, conversion or retention in production.
 
 ## Final solution
 

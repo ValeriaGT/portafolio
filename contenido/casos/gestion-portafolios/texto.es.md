@@ -17,6 +17,7 @@ portadaAlt: Pantalla de gestión de portafolios con la composición actual a la 
 prototipo: prototipos/gestion-portafolios/index.html
 destacado: true
 orden: 2
+estado: Propuesta y prototipo · Pendiente de pruebas con clientes
 ---
 
 ## Resumen
@@ -89,6 +90,8 @@ Organicé la propuesta como una relación que se construye en tres movimientos, 
 **Regulación.** El flujo respeta el marco colombiano del deber de asesoría: diferencia el servicio con recomendación profesional del de solo ejecución, aclara que la información mostrada no es una recomendación y pide confirmar cuando la composición se sale del perfil.
 
 ## Validación
+
+**Límite de esta revisión:** las puntuaciones y citas de esta sección fueron generadas por agentes de IA, no por clientes. Son hipótesis para preparar pruebas, no evidencia de usabilidad, confianza o satisfacción de usuarios reales.
 
 Se hizo una revisión preliminar con **agentes sintéticos**: cinco paneles, uno por segmento conductual, cada uno con cinco personas simuladas a partir de los perfiles documentados del segmento. Cada persona recorrió el prototipo en escritorio y móvil, comentó cada pantalla y calificó de 1 a 5 la claridad, la confianza y la facilidad. En el panel de quienes están empezando a invertir, la puntuación se calculó con 4 de las 5 personas; la quinta respondió después y confirmó los mismos hallazgos.
 

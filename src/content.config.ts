@@ -17,6 +17,7 @@ const casos = defineCollection({
       rol: z.string().optional(),
       resumen: z.string().optional(),
       origen: z.string().optional(),
+      estado: z.string().optional(),
       periodo: z.string().optional(),
       equipo: z.string().optional(),
       herramientas: z.array(z.string()).optional(),

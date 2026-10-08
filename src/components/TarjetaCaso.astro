@@ -12,6 +12,7 @@ interface Props {
     rol?: string;
     resumen?: string;
     origen?: string;
+    estado?: string;
     portada?: ImageMetadata;
     portadaAlt?: string;
   };
@@ -40,6 +41,7 @@ const href = ruta(idioma, 'caso', carpeta);
     }
   </div>
   <div class="tarjeta-cuerpo">
+    {data.estado && <p class="tarjeta-estado">{data.estado}</p>}
     {data.origen && <p class="tarjeta-origen">{data.origen}</p>}
     <Titulo class="tarjeta-titulo">
       <a href={href}><Valor valor={data.titulo} idioma={idioma} /></a>
@@ -89,6 +91,11 @@ const href = ruta(idioma, 'caso', carpeta);
     gap: var(--e1);
     padding: var(--e3);
     flex: 1;
+  }
+  .tarjeta-estado {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--azul);
   }
   .tarjeta-origen {
     font-size: 0.8125rem;

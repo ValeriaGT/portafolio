@@ -22,6 +22,7 @@ const prototipo = data.prototipo && (/^https?:/.test(data.prototipo) ? data.prot
 const titulo = data.titulo ?? t.pendiente;
 
 const ficha = [
+  { etiqueta: idioma === 'es' ? 'Estado y evidencia' : 'Status and evidence', valor: data.estado },
   { etiqueta: t.rol, valor: data.rol, obligatorio: true },
   { etiqueta: t.origen, valor: data.origen },
   { etiqueta: t.periodo, valor: data.periodo },
@@ -35,6 +36,7 @@ const ficha = [
       <div class="contenedor">
         <p class="volver"><a href={ruta(idioma, 'casos')}>← {t.volverCasos}</a></p>
         <h1>{titulo}</h1>
+        {data.resumen && <p class="resumen-inicial">{data.resumen}</p>}
         {data.bajada && <p class="bajada">{data.bajada}</p>}
       </div>
     </header>
@@ -138,6 +140,12 @@ const ficha = [
     margin-top: var(--e3);
     font-size: clamp(2.25rem, 6vw, 4rem);
     letter-spacing: -0.02em;
+  }
+  .resumen-inicial {
+    margin-top: var(--e3);
+    max-width: 720px;
+    color: var(--texto-claro);
+    font-size: 1.125rem;
   }
   .bajada {
     margin-top: var(--e2);

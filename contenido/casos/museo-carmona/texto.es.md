@@ -15,6 +15,7 @@ portadaAlt: Galería del sitio del Museo Carmona con el menú de categorías, lo
 sitio: https://www.museocarmona.com/
 destacado: false
 orden: 4
+estado: Sitio publicado · Revisado con el artista
 ---
 
 ## Resumen

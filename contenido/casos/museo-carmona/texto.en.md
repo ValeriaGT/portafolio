@@ -13,6 +13,7 @@ portadaAlt: Gallery page of the Museo Carmona website with the category menu, th
 sitio: https://www.museocarmona.com/
 destacado: false
 orden: 4
+estado: Published website · Reviewed with the artist
 ---
 
 ## Summary

@@ -2,11 +2,11 @@
 # Source: Valeria-Garzon-Resume-styled-EN.html
 nombre: Valeria Garzón Triana
 roles:
-  - Product Designer UX/UI
-  - Product Owner
+  - Product Designer
+  - UX/UI Designer
 # Positioning line on the Home page (taken from the professional summary)
-frase: I design digital products for fintech, proptech and B2B platforms, combining user research, usability testing and data analysis to guide design and prioritization decisions.
-alcance: 5+ years of experience. At Skandia I led research and the backlog for the finfluencer MVP, and the client portal redesign to improve adoption and return visits, hand in hand with business and engineering.
+frase: I design digital experiences that help people understand, decide and act. I connect research, interface design and business goals across fintech and B2B products.
+alcance: 5+ years of experience across fintech, proptech and B2B platforms. At Skandia, I helped take a digital advisory platform from research to production with business and engineering teams.
 ubicacion: Bogotá, Colombia
 telefono: +57 350 528 7642
 correo: valeria.garzont@gmail.com
@@ -87,4 +87,8 @@ certificaciones:
   - { nombre: Scrum Master and Product Owner, entidad: CertiProf, fecha: May 2020 }
 ---
 
-Product Designer UX/UI and Product Owner with 5+ years of experience in digital product design across fintech, proptech and B2B portals. I design fintech digital platforms by combining user research, usability testing, data analysis in Databricks and backlog management to decide what to iterate on first. I work hand in hand with business and engineering teams, and I prototype with Figma and Claude Code to validate ideas faster.
+I am a Product Designer and UX/UI Designer with 5+ years of experience across fintech, proptech and B2B platforms. I connect user needs with business goals through research, user flows, interface design and usability testing.
+
+At Skandia, I contributed from problem discovery to the launch of a digital advisory platform. I also analyze behavioral data to identify friction and inform new proposals. I work with business and engineering teams to turn findings into design decisions and support implementation.
+
+My Product Owner experience helps me prioritize and define scope. I use Figma and AI-assisted prototyping to explore solutions, and user testing to evaluate whether they work.

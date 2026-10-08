@@ -12,7 +12,9 @@ equipo: Valeria Garzón y Lianna González
 portada: ./01-portada.jpg
 portadaAlt: Portada del proyecto Catbyte, con el logo de un gato que muerde un control de videojuegos y los nombres Valeria Garzón y Lianna González.
 destacado: false
+borrador: true
 orden: 5
+estado: Proyecto formativo · Investigación y propuesta
 ---
 
 ## Resumen

@@ -12,7 +12,8 @@ portada: ./02-okrs-completos.png
 portadaAlt: Acelera's OKR screen with a green banner reading "Your OKRs are complete — create a project in the Strategic Roadmap" and a button to go to the Roadmap.
 prototipo: https://valeriagt.github.io/acelera-prototipo/
 destacado: true
-orden: 1
+orden: 3
+estado: Course project · Experiment planned, not run
 ---
 
 ## Summary
@@ -29,7 +30,6 @@ Having features available doesn't necessarily make them part of users' day-to-da
 
 - **98%** complete onboarding.
 - **73.1%** of sessions happen in OKRs, the most used feature.
-- [PENDING: confirm how to read the "-5%" figure for "Other modules explored by users"]
 
 **Opportunity:** 88% of licenses have not yet turned into recurring users. Of 1,715 base users with an active license (not read-only), 200 are monthly active users (MAU), or 11.66%.
 
