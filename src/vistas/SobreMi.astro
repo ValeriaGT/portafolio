@@ -131,23 +131,23 @@ const linkedinTexto = data.linkedin?.replace(/^https?:\/\/(www\.)?/, '').replace
           }
         </ol>
       </section>
+
+      <section aria-labelledby="t-cert">
+        <h2 id="t-cert" class="rotulo">{t.certificaciones}</h2>
+        <ul class="certificaciones">
+          {
+            data.certificaciones.map((c) => (
+              <li>
+                <strong>{c.nombre}</strong>
+                <span>{c.entidad} · {c.fecha}</span>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
     </div>
   </div>
 
-  <section class="certificaciones" aria-labelledby="t-cert">
-    <div class="contenedor">
-      <h2 id="t-cert" class="rotulo">{t.certificaciones}</h2>
-      <ul>
-        {
-          data.certificaciones.map((c) => (
-            <li>
-              <strong>{c.nombre}</strong> · {c.entidad}, {c.fecha}
-            </li>
-          ))
-        }
-      </ul>
-    </div>
-  </section>
 
   <section id="contacto" class="contacto sobre-oscuro" aria-labelledby="t-contacto">
     <div class="contenedor contacto-rejilla">
@@ -335,6 +335,7 @@ const linkedinTexto = data.linkedin?.replace(/^https?:\/\/(www\.)?/, '').replace
     background: var(--marino);
     color: var(--texto-claro);
     padding-block: var(--e8) var(--e6);
+    margin-top: var(--e10);
   }
   .contacto-rejilla {
     display: grid;
@@ -381,22 +382,20 @@ const linkedinTexto = data.linkedin?.replace(/^https?:\/\/(www\.)?/, '').replace
     color: var(--lavanda);
   }
   .certificaciones {
-    margin-top: var(--e10);
-    margin-bottom: 0;
-    background: var(--lavanda);
-    border-top: 3px solid var(--azul);
-    padding-block: var(--e5);
-  }
-  .certificaciones .rotulo {
-    color: var(--marino);
-    border-color: rgba(2, 4, 38, 0.16);
-  }
-  .certificaciones ul {
     list-style: none;
     padding: 0;
     display: grid;
     gap: var(--e2) var(--e4);
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
     font-size: 0.9375rem;
+  }
+  .certificaciones li {
+    display: flex;
+    flex-direction: column;
+    padding-left: var(--e2);
+    border-left: 2px solid var(--lavanda);
+  }
+  .certificaciones span {
+    color: var(--gris);
   }
 </style>
