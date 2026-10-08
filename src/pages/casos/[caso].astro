@@ -1,0 +1,12 @@
+---
+import Caso from '../../vistas/Caso.astro';
+import { casosDe } from '../../lib/contenido';
+
+export async function getStaticPaths() {
+  const casos = await casosDe('es');
+  return casos.map((caso) => ({ params: { caso: caso.carpeta }, props: { caso } }));
+}
+const { caso } = Astro.props;
+---
+
+<Caso idioma="es" caso={caso} />

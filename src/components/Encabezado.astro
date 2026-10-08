@@ -1,0 +1,175 @@
+---
+import { IDIOMAS, textos, type Idioma } from '../i18n/textos';
+import { ruta, type Pagina } from '../lib/rutas';
+
+interface Props {
+  idioma: Idioma;
+  pagina: Pagina;
+  caso?: string;
+}
+const { idioma, pagina, caso } = Astro.props;
+// El orden ES · EN es fijo; solo cambia cuál está resaltado
+const t = textos[idioma];
+
+const enlaces = [
+  { clave: 'inicio', texto: t.menu.inicio, href: ruta(idioma, 'inicio') },
+  { clave: 'casos', texto: t.menu.casos, href: ruta(idioma, 'casos') },
+  { clave: 'sobreMi', texto: t.menu.sobreMi, href: ruta(idioma, 'sobreMi') },
+] as const;
+const activa = pagina === 'caso' ? 'casos' : pagina;
+---
+
+<header class="encabezado sobre-oscuro">
+  <div class="contenedor fila">
+    <a class="marca" href={ruta(idioma, 'inicio')}>
+      <span class="marca-nombre">Valeria Garzón Triana</span>
+      <span class="marca-rol">Product Designer · Product Owner</span>
+    </a>
+    <nav aria-label={idioma === 'es' ? 'Principal' : 'Main'}>
+      <ul>
+        {
+          enlaces.map((e) => (
+            <li>
+              <a href={e.href} aria-current={activa === e.clave ? 'page' : undefined}>
+                {e.texto}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <div class="idioma" role="group" aria-label={idioma === 'es' ? 'Idioma' : 'Language'}>
+        {
+          IDIOMAS.map((i) =>
+            i === idioma ? (
+              <span class="idioma-opcion activa" aria-current="true">
+                {i.toUpperCase()}
+              </span>
+            ) : (
+              <a
+                class="idioma-opcion"
+                href={ruta(i, pagina, caso)}
+                hreflang={i}
+                lang={i}
+                data-idioma={i}
+                aria-label={t.cambiarIdioma}
+              >
+                {i.toUpperCase()}
+              </a>
+            ),
+          )
+        }
+      </div>
+    </nav>
+  </div>
+</header>
+
+<script>
+  document.querySelectorAll<HTMLAnchorElement>('[data-idioma]').forEach((a) =>
+    a.addEventListener('click', () => {
+      try {
+        localStorage.setItem('idioma', a.dataset.idioma!);
+      } catch {}
+    }),
+  );
+</script>
+
+<style>
+  .encabezado {
+    background: var(--marino);
+    color: var(--blanco);
+  }
+  .fila {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--e2) var(--e4);
+    padding-block: var(--e2);
+  }
+  .marca {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: var(--blanco);
+  }
+  .marca-nombre {
+    font-family: var(--titulos);
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.2;
+  }
+  .marca-rol {
+    font-size: 0.8125rem;
+    color: var(--morado);
+    font-weight: 500;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    gap: var(--e3);
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: var(--e3);
+  }
+  nav a {
+    color: var(--texto-claro);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    padding-block: var(--e1);
+    border-bottom: 2px solid transparent;
+  }
+  nav a:hover {
+    color: var(--blanco);
+  }
+  nav a[aria-current='page'] {
+    color: var(--blanco);
+    border-color: var(--morado);
+  }
+  .idioma {
+    display: flex;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 999px;
+    padding: 2px;
+    font-family: var(--titulos);
+    font-size: 0.8125rem;
+    font-weight: 700;
+  }
+  .idioma-opcion {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    min-height: 32px;
+    padding: 0 var(--e1);
+    border-radius: 999px;
+    border: 0;
+  }
+  .idioma-opcion.activa {
+    background: var(--morado);
+    color: var(--marino);
+  }
+  a.idioma-opcion {
+    color: var(--texto-claro);
+  }
+  a.idioma-opcion:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: var(--blanco);
+  }
+  @media (max-width: 639px) {
+    .fila {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    nav {
+      width: 100%;
+      justify-content: space-between;
+    }
+    ul {
+      gap: var(--e2);
+    }
+  }
+</style>

@@ -1,0 +1,63 @@
+---
+import Base from '../layouts/Base.astro';
+import TarjetaCaso from '../components/TarjetaCaso.astro';
+import { textos, type Idioma } from '../i18n/textos';
+import { casosDe } from '../lib/contenido';
+
+interface Props {
+  idioma: Idioma;
+}
+const { idioma } = Astro.props;
+const t = textos[idioma];
+const casos = await casosDe(idioma);
+---
+
+<Base idioma={idioma} pagina="casos" titulo={t.casosTitulo} descripcion={t.casosIntro}>
+  <div class="contenedor pagina">
+    <header class="cabecera">
+      <h1>{t.casosTitulo}</h1>
+      <p>{t.casosIntro}</p>
+    </header>
+    {
+      casos.length ? (
+        <ul class="lista" role="list">
+          {casos.map((c) => (
+            <li>
+              <TarjetaCaso idioma={idioma} carpeta={c.carpeta} data={c.data} horizontal nivel="h2" />
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p class="pendiente">{t.sinCasos}</p>
+      )
+    }
+  </div>
+</Base>
+
+<style>
+  .pagina {
+    padding-top: var(--e8);
+  }
+  .cabecera {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e2);
+    margin-bottom: var(--e6);
+    padding-bottom: var(--e3);
+    border-bottom: 1px solid var(--borde);
+  }
+  h1 {
+    font-size: clamp(2.25rem, 5vw, 3.5rem);
+  }
+  .cabecera p {
+    color: var(--gris);
+    font-size: 1.125rem;
+  }
+  .lista {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--e4);
+  }
+</style>

@@ -1,0 +1,59 @@
+---
+import '../styles/global.css';
+import Encabezado from '../components/Encabezado.astro';
+import Pie from '../components/Pie.astro';
+import { textos, type Idioma } from '../i18n/textos';
+import { ruta, type Pagina } from '../lib/rutas';
+
+interface Props {
+  idioma: Idioma;
+  pagina: Pagina;
+  titulo: string;
+  descripcion?: string;
+  caso?: string;
+}
+
+const { idioma, pagina, titulo, descripcion, caso } = Astro.props;
+const otro: Idioma = idioma === 'es' ? 'en' : 'es';
+const t = textos[idioma];
+const nombre = 'Valeria Garzón Triana';
+const tituloCompleto = pagina === 'inicio' ? `${nombre} · Product Designer UX/UI` : `${titulo} · ${nombre}`;
+const canonica = new URL(ruta(idioma, pagina, caso), Astro.site);
+const alterna = new URL(ruta(otro, pagina, caso), Astro.site);
+---
+
+<!doctype html>
+<html lang={idioma}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{tituloCompleto}</title>
+    {descripcion && <meta name="description" content={descripcion} />}
+    <link rel="canonical" href={canonica} />
+    <link rel="alternate" hreflang={idioma} href={canonica} />
+    <link rel="alternate" hreflang={otro} href={alterna} />
+    <meta property="og:title" content={tituloCompleto} />
+    {descripcion && <meta property="og:description" content={descripcion} />}
+    <meta name="theme-color" content="#020426" />
+    <link rel="icon" href={`data:image/svg+xml,${encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#020426"/><text x="16" y="22" font-family="Arial,sans-serif" font-weight="700" font-size="15" fill="#B06EFE" text-anchor="middle">VG</text></svg>')}`} />
+    {
+      pagina === 'inicio' && idioma === 'es' && (
+        <script is:inline define:vars={{ inicioEn: ruta('en', 'inicio') }}>
+          // Si la persona eligió inglés antes y llega desde fuera del sitio, la llevamos a /en/
+          try {
+            var desdeAfuera = !document.referrer || new URL(document.referrer).origin !== location.origin;
+            if (localStorage.getItem('idioma') === 'en' && desdeAfuera) location.replace(inicioEn);
+          } catch (e) {}
+        </script>
+      )
+    }
+  </head>
+  <body>
+    <a class="saltar" href="#contenido">{t.saltar}</a>
+    <Encabezado idioma={idioma} pagina={pagina} caso={caso} />
+    <main id="contenido" tabindex="-1">
+      <slot />
+    </main>
+    <Pie idioma={idioma} compacto={pagina === 'sobreMi'} />
+  </body>
+</html>

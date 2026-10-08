@@ -1,0 +1,158 @@
+---
+import { Picture } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import TarjetaCaso from '../components/TarjetaCaso.astro';
+import { textos, type Idioma } from '../i18n/textos';
+import { casosDe, sobreMiDe, avisar } from '../lib/contenido';
+import { banner } from '../lib/archivos';
+import { ruta } from '../lib/rutas';
+
+interface Props {
+  idioma: Idioma;
+}
+const { idioma } = Astro.props;
+const t = textos[idioma];
+const { data } = await sobreMiDe(idioma);
+const casos = await casosDe(idioma);
+const destacados = casos.filter((c) => c.data.destacado).slice(0, 3);
+if (casos.length && destacados.length < 2) avisar(`Inicio (${idioma}): hay ${destacados.length} caso(s) con "destacado: true"; lo ideal son 2 o 3.`);
+---
+
+<Base idioma={idioma} pagina="inicio" titulo={t.menu.inicio} descripcion={data.frase}>
+  <section class="heroe sobre-oscuro" aria-labelledby="nombre">
+    <div class="contenedor heroe-rejilla">
+      <div class="heroe-texto">
+        <p class="heroe-roles">{data.roles.join(' · ')}</p>
+        <h1 id="nombre">{data.nombre}</h1>
+        {data.frase ? <p class="heroe-frase">{data.frase}</p> : <p class="pendiente">{t.pendiente}</p>}
+        {data.alcance && <p class="heroe-alcance">{data.alcance}</p>}
+        <div class="botones">
+          <a class="boton boton-primario" href={`${ruta(idioma, 'sobreMi')}#contacto`}>{t.contactar}</a>
+          <a class="boton boton-secundario" href={ruta(idioma, 'casos')}>{t.verCasos}</a>
+        </div>
+      </div>
+      {
+        banner && (
+          <div class="heroe-ilustracion">
+            <Picture
+              src={banner}
+              alt={data.bannerAlt ?? ''}
+              formats={['avif', 'webp']}
+              widths={[480, 824]}
+              sizes="(min-width: 1200px) 560px, 100vw"
+              loading="eager"
+              fetchpriority="high"
+            />
+          </div>
+        )
+      }
+    </div>
+  </section>
+
+  <section class="contenedor destacados" aria-labelledby="titulo-destacados">
+    <h2 id="titulo-destacados" class="rotulo">{t.casosDestacados}</h2>
+    {
+      destacados.length ? (
+        <div class="rejilla-casos">
+          {destacados.map((c) => (
+            <TarjetaCaso idioma={idioma} carpeta={c.carpeta} data={c.data} />
+          ))}
+        </div>
+      ) : (
+        <p class="pendiente">{t.pendiente}</p>
+      )
+    }
+    {casos.length > destacados.length && (
+      <p class="ver-todos"><a href={ruta(idioma, 'casos')}>{t.todosLosCasos} →</a></p>
+    )}
+  </section>
+</Base>
+
+<style>
+  /* La ilustración va dentro del contenedor: mismo margen a ambos lados que el texto.
+     Móvil y tablet: ilustración arriba y texto debajo. Desde 1200 px: dos columnas. */
+  .heroe {
+    background: var(--marino);
+    color: var(--blanco);
+  }
+  .heroe-rejilla {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e5);
+    padding-block: var(--e4) var(--e8);
+  }
+  .heroe-ilustracion {
+    order: -1;
+    border-radius: var(--radio);
+    overflow: hidden;
+  }
+  .heroe-ilustracion :global(img) {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 480px;
+    object-fit: cover;
+    object-position: center 40%;
+  }
+  .heroe-texto {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e3);
+    max-width: 680px;
+  }
+  .heroe-roles {
+    font-family: var(--titulos);
+    font-weight: 600;
+    color: var(--morado);
+    letter-spacing: 0.04em;
+  }
+  h1 {
+    font-size: clamp(2.5rem, 7vw, 4.5rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  .heroe-frase {
+    font-size: clamp(1.125rem, 2.2vw, 1.375rem);
+    line-height: 1.5;
+    color: var(--texto-claro);
+  }
+  .heroe-alcance {
+    font-size: 0.9375rem;
+    color: var(--lavanda);
+    border-left: 3px solid var(--morado);
+    padding-left: var(--e2);
+  }
+  @media (min-width: 1200px) {
+    .heroe-rejilla {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      align-items: center;
+      gap: var(--e6);
+      padding-block: var(--e8);
+    }
+    .heroe-ilustracion {
+      order: 0;
+    }
+    .heroe-ilustracion :global(img) {
+      max-height: none;
+      aspect-ratio: 824 / 672;
+      object-position: center;
+    }
+    h1 {
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+    }
+  }
+  .destacados {
+    padding-top: var(--e10);
+  }
+  .rejilla-casos {
+    display: grid;
+    gap: var(--e3);
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+  }
+  .ver-todos {
+    margin-top: var(--e4);
+    font-family: var(--titulos);
+    font-weight: 600;
+  }
+</style>

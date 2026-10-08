@@ -1,0 +1,374 @@
+---
+import { Picture } from 'astro:assets';
+import { render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import { textos, type Idioma } from '../i18n/textos';
+import { sobreMiDe, avisar } from '../lib/contenido';
+import { foto, hojaDeVida } from '../lib/archivos';
+
+interface Props {
+  idioma: Idioma;
+}
+const { idioma } = Astro.props;
+const t = textos[idioma];
+const entrada = await sobreMiDe(idioma);
+const { data } = entrada;
+const { Content } = await render(entrada);
+const pdf = hojaDeVida(idioma);
+if (!pdf) avisar(`sobre-mi: falta contenido/sobre-mi/hoja-de-vida.${idioma}.pdf`);
+if (!foto) avisar('sobre-mi: falta contenido/sobre-mi/foto.jpg');
+const telefonoHref = data.telefono ? `tel:${data.telefono.replace(/[^\d+]/g, '')}` : undefined;
+const linkedinTexto = data.linkedin?.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
+---
+
+<Base idioma={idioma} pagina="sobreMi" titulo={t.sobreMiTitulo} descripcion={data.frase}>
+  <div class="contenedor pagina">
+    <aside class="lateral identidad-bloque sobre-oscuro">
+      {
+        foto ? (
+          <div class="foto">
+            <Picture
+              src={foto}
+              alt={data.fotoAlt ?? data.nombre}
+              formats={['avif', 'webp']}
+              widths={[320, 560, 800]}
+              sizes="(min-width: 1024px) 320px, (min-width: 640px) 50vw, 100vw"
+              loading="eager"
+            />
+          </div>
+        ) : (
+          <p class="pendiente">{t.pendiente}</p>
+        )
+      }
+      <div class="identidad">
+        <h1>{data.nombre}</h1>
+        <p class="roles">
+          {data.roles.map((r, i) => (i ? [<br />, r] : r))}
+        </p>
+      </div>
+
+      {
+        pdf ? (
+          <a class="boton boton-primario cv" href={pdf} download={`Valeria-Garzon-${idioma === 'es' ? 'Hoja-de-vida' : 'Resume'}.pdf`}>
+            ↓ {t.descargarCV}
+          </a>
+        ) : (
+          <p class="pendiente">{t.descargarCV} {t.pendiente}</p>
+        )
+      }
+    </aside>
+
+    <aside class="lateral detalle sobre-oscuro" aria-label={t.habilidades}>
+      <section aria-labelledby="t-habilidades">
+        <h2 id="t-habilidades" class="rotulo">{t.habilidades}</h2>
+        <dl class="habilidades">
+          {
+            data.habilidades.map((h) => (
+              <div>
+                <dt>{h.grupo}</dt>
+                <dd>{h.items}</dd>
+              </div>
+            ))
+          }
+        </dl>
+      </section>
+
+      <section aria-labelledby="t-educacion">
+        <h2 id="t-educacion" class="rotulo">{t.educacion}</h2>
+        <ul class="simple">
+          {
+            data.educacion.map((e) => (
+              <li>
+                <strong>{e.titulo}</strong>
+                <span>{e.institucion}</span>
+                <span class="tenue">{e.periodo}</span>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+
+      <section aria-labelledby="t-idiomas">
+        <h2 id="t-idiomas" class="rotulo">{t.idiomas}</h2>
+        <ul class="simple">
+          {data.idiomas.map((i) => <li>{i}</li>)}
+        </ul>
+      </section>
+    </aside>
+
+    <div class="principal">
+      <section aria-labelledby="t-resumen">
+        <h2 id="t-resumen" class="rotulo">{t.resumenProfesional}</h2>
+        <div class="resumen"><Content /></div>
+      </section>
+
+      <section aria-labelledby="t-herramientas">
+        <h2 id="t-herramientas" class="rotulo">{t.herramientas}</h2>
+        <ul class="etiquetas">{data.herramientas.map((h) => <li>{h}</li>)}</ul>
+      </section>
+
+      <section aria-labelledby="t-trayectoria">
+        <h2 id="t-trayectoria" class="rotulo">{t.trayectoria}</h2>
+        <ol class="trayectoria">
+          {
+            data.experiencia.map((x) => (
+              <li>
+                <div class="cargo">
+                  <h3>
+                    {x.cargo} <span class="empresa">· {x.empresa}</span>
+                  </h3>
+                  <p class="periodo">{x.periodo}</p>
+                </div>
+                {x.logros.length > 0 && (
+                  <ul>
+                    {x.logros.map((l) => (
+                      <li>{l}</li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            ))
+          }
+        </ol>
+      </section>
+
+      <section id="contacto" class="contacto" aria-labelledby="t-contacto">
+        <h2 id="t-contacto" class="rotulo">{t.contacto}</h2>
+        <p class="contacto-intro">{t.contactoIntro}</p>
+        <dl>
+          {
+            data.correo && (
+              <div>
+                <dt>{t.correo}</dt>
+                <dd><a href={`mailto:${data.correo}`}>{data.correo}</a></dd>
+              </div>
+            )
+          }
+          {
+            data.telefono && (
+              <div>
+                <dt>{t.telefono}</dt>
+                <dd><a href={telefonoHref}>{data.telefono}</a></dd>
+              </div>
+            )
+          }
+          {
+            data.linkedin && (
+              <div>
+                <dt>LinkedIn</dt>
+                <dd><a href={data.linkedin} target="_blank" rel="noopener noreferrer">{linkedinTexto}<span class="visualmente-oculto"> ({t.nuevaPestana})</span></a></dd>
+              </div>
+            )
+          }
+          {
+            data.ubicacion && (
+              <div>
+                <dt>{idioma === 'es' ? 'Ubicación' : 'Location'}</dt>
+                <dd>{data.ubicacion}</dd>
+              </div>
+            )
+          }
+        </dl>
+      </section>
+    </div>
+  </div>
+
+  <section class="certificaciones" aria-labelledby="t-cert">
+    <div class="contenedor">
+      <h2 id="t-cert" class="rotulo">{t.certificaciones}</h2>
+      <ul>
+        {
+          data.certificaciones.map((c) => (
+            <li>
+              <strong>{c.nombre}</strong> · {c.entidad}, {c.fecha}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+</Base>
+
+<style>
+  /* En móvil: identidad → resumen y trayectoria → habilidades. En escritorio, columna lateral como la hoja de vida. */
+  .pagina {
+    display: grid;
+    grid-template-areas: 'identidad' 'principal' 'detalle';
+    gap: var(--e6);
+    padding-top: var(--e6);
+  }
+  .identidad-bloque { grid-area: identidad; }
+  .detalle { grid-area: detalle; }
+  .principal { grid-area: principal; }
+  @media (min-width: 1024px) {
+    .pagina {
+      grid-template-columns: 320px minmax(0, 1fr);
+      grid-template-rows: auto 1fr;
+      grid-template-areas: 'identidad principal' 'detalle principal';
+      column-gap: var(--e8);
+      row-gap: 0;
+      align-items: start;
+    }
+    .identidad-bloque { border-radius: var(--radio) var(--radio) 0 0; padding-bottom: var(--e2); }
+    .detalle { border-radius: 0 0 var(--radio) var(--radio); padding-top: var(--e2); }
+  }
+  .lateral {
+    background: var(--marino);
+    color: var(--texto-claro);
+    border-radius: var(--radio);
+    padding: var(--e3);
+    display: flex;
+    flex-direction: column;
+    gap: var(--e4);
+    font-size: 0.9375rem;
+  }
+  .foto {
+    aspect-ratio: 1;
+    border-radius: var(--radio);
+    overflow: hidden;
+    max-width: 320px;
+  }
+  .foto :global(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 65% 50%;
+  }
+  .identidad h1 {
+    color: var(--blanco);
+    font-size: 2rem;
+  }
+  .roles {
+    margin-top: var(--e1);
+    color: var(--morado);
+    font-weight: 500;
+  }
+  .cv {
+    justify-content: center;
+    text-align: center;
+  }
+  .lateral .rotulo {
+    margin-bottom: var(--e2);
+    font-size: 0.8125rem;
+  }
+  .habilidades {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--e2);
+  }
+  .habilidades dt,
+  .simple strong {
+    color: var(--blanco);
+    font-weight: 700;
+  }
+  .habilidades dd {
+    margin: 0;
+  }
+  .simple {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--e2);
+  }
+  .simple li {
+    display: flex;
+    flex-direction: column;
+  }
+  .tenue {
+    color: var(--lavanda);
+    opacity: 0.85;
+  }
+
+  .principal {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e8);
+    min-width: 0;
+  }
+  .resumen {
+    font-size: 1.1875rem;
+    line-height: 1.6;
+    max-width: 720px;
+  }
+  .trayectoria {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--e4);
+  }
+  .cargo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 4px var(--e3);
+    margin-bottom: var(--e1);
+  }
+  .cargo h3 {
+    font-size: 1.125rem;
+  }
+  .empresa {
+    font-weight: 500;
+  }
+  .periodo {
+    color: var(--azul);
+    font-size: 0.9375rem;
+    white-space: nowrap;
+  }
+  .trayectoria ul {
+    padding-left: var(--e3);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    color: var(--gris);
+  }
+  .contacto {
+    scroll-margin-top: var(--e3);
+  }
+  .contacto-intro {
+    font-family: var(--titulos);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: var(--e3);
+  }
+  .contacto dl {
+    margin: 0;
+    display: grid;
+    gap: var(--e2) var(--e4);
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
+  }
+  .contacto dt {
+    font-family: var(--titulos);
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gris);
+  }
+  .contacto dd {
+    margin: 0;
+    overflow-wrap: anywhere;
+  }
+  .certificaciones {
+    margin-top: var(--e10);
+    margin-bottom: 0;
+    background: var(--lavanda);
+    border-top: 3px solid var(--azul);
+    padding-block: var(--e5);
+  }
+  .certificaciones .rotulo {
+    color: var(--marino);
+    border-color: rgba(2, 4, 38, 0.16);
+  }
+  .certificaciones ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: var(--e2) var(--e4);
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+    font-size: 0.9375rem;
+  }
+</style>

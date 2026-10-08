@@ -1,0 +1,79 @@
+---
+import { textos, type Idioma } from '../i18n/textos';
+import { sobreMiDe } from '../lib/contenido';
+import { ruta } from '../lib/rutas';
+
+interface Props {
+  idioma: Idioma;
+  compacto?: boolean;
+}
+const { idioma, compacto = false } = Astro.props;
+const t = textos[idioma];
+const { data } = await sobreMiDe(idioma);
+---
+
+<footer class:list={['pie', { compacto }]}>
+  {!compacto && (
+  <div class="contenedor rejilla">
+    <div>
+      <p class="pie-titulo">{t.pieTitulo}</p>
+      <a class="boton boton-primario" href={ruta(idioma, 'sobreMi')}>{t.pieBoton} →</a>
+    </div>
+    <ul class="pie-enlaces">
+      {data.correo && <li><a href={`mailto:${data.correo}`}>{data.correo}</a></li>}
+      {data.linkedin && <li><a href={data.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn<span class="visualmente-oculto"> ({t.nuevaPestana})</span></a></li>}
+    </ul>
+  </div>
+  )}
+  <div class="contenedor">
+    <p class="firma">© {new Date().getFullYear()} {data.nombre}</p>
+  </div>
+</footer>
+
+<style>
+  .pie {
+    background: var(--lavanda);
+    border-top: 3px solid var(--azul);
+    padding-block: var(--e5) var(--e3);
+    margin-top: var(--e10);
+  }
+  .rejilla {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: var(--e3);
+  }
+  .pie-titulo {
+    font-family: var(--titulos);
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: var(--e2);
+  }
+  .pie-enlaces {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--e1) var(--e3);
+  }
+  .pie-enlaces a {
+    color: var(--marino);
+    font-weight: 500;
+  }
+  .compacto {
+    margin-top: 0;
+    border-top: 0;
+    padding-top: 0;
+  }
+  .compacto .firma {
+    margin-top: 0;
+    padding-top: var(--e3);
+    border-top: 1px solid rgba(2, 4, 38, 0.16);
+  }
+  .firma {
+    margin-top: var(--e4);
+    font-size: 0.875rem;
+    color: var(--gris);
+  }
+</style>

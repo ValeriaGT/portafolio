@@ -1,0 +1,322 @@
+---
+import { Image } from 'astro:assets';
+import { render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import { textos, type Idioma } from '../i18n/textos';
+import { SECCIONES } from '../lib/secciones.mjs';
+import { ruta } from '../lib/rutas';
+import Valor from '../components/Valor.astro';
+import type { casosDe } from '../lib/contenido';
+
+type CasoEntrada = Awaited<ReturnType<typeof casosDe>>[number];
+interface Props {
+  idioma: Idioma;
+  caso: CasoEntrada;
+}
+const { idioma, caso } = Astro.props;
+const { data } = caso;
+const t = textos[idioma];
+const { Content } = await render(caso);
+const titulo = data.titulo ?? t.pendiente;
+
+const ficha = [
+  { etiqueta: t.rol, valor: data.rol, obligatorio: true },
+  { etiqueta: t.origen, valor: data.origen },
+  { etiqueta: t.periodo, valor: data.periodo },
+  { etiqueta: t.equipo, valor: data.equipo },
+].filter((f) => f.valor || f.obligatorio);
+---
+
+<Base idioma={idioma} pagina="caso" caso={caso.carpeta} titulo={titulo} descripcion={data.resumen}>
+  <article>
+    <header class="cabecera sobre-oscuro">
+      <div class="contenedor">
+        <p class="volver"><a href={ruta(idioma, 'casos')}>← {t.volverCasos}</a></p>
+        <h1>{titulo}</h1>
+        {data.bajada && <p class="bajada">{data.bajada}</p>}
+      </div>
+    </header>
+
+    {
+      data.portada && (
+        <div class="contenedor portada">
+          <Image
+            src={data.portada}
+            alt={data.portadaAlt ?? ''}
+            widths={[640, 1120, 1600, 2240]}
+            sizes="(min-width: 1184px) 1120px, 100vw"
+            loading="eager"
+            fetchpriority="high"
+          />
+        </div>
+      )
+    }
+
+    <div class="contenedor cuerpo">
+      <aside class="ficha sobre-oscuro" aria-label={idioma === 'es' ? 'Ficha del caso' : 'Case overview'}>
+        <dl>
+          {
+            ficha.map((f) => (
+              <div>
+                <dt>{f.etiqueta}</dt>
+                <dd><Valor valor={f.valor} idioma={idioma} /></dd>
+              </div>
+            ))
+          }
+          {
+            !!data.herramientas?.length && (
+              <div>
+                <dt>{t.herramientas}</dt>
+                <dd>
+                  <ul class="etiquetas">
+                    {data.herramientas.map((h) => (
+                      <li>{h}</li>
+                    ))}
+                  </ul>
+                </dd>
+              </div>
+            )
+          }
+        </dl>
+
+        <nav class="indice" aria-label={t.enEsteCaso}>
+          <p class="rotulo">{t.enEsteCaso}</p>
+          <ol>
+            {
+              SECCIONES.map((s) => (
+                <li>
+                  <a href={`#${s.id}`}>{s[idioma]}</a>
+                </li>
+              ))
+            }
+          </ol>
+        </nav>
+
+        <div class="ficha-botones">
+          {
+            data.sitio && (
+              <a class="boton boton-secundario" href={data.sitio} target="_blank" rel="noopener noreferrer">
+                {t.verSitio} ↗
+                <span class="visualmente-oculto"> ({t.nuevaPestana})</span>
+              </a>
+            )
+          }
+          {
+            data.prototipo && (
+              <a class="boton boton-secundario" href={data.prototipo} target="_blank" rel="noopener noreferrer">
+                {t.verPrototipo} ↗
+                <span class="visualmente-oculto"> ({t.nuevaPestana})</span>
+              </a>
+            )
+          }
+        </div>
+      </aside>
+
+      <div class="texto-caso">
+        <Content />
+      </div>
+    </div>
+  </article>
+</Base>
+
+<style>
+  .cabecera {
+    background: var(--marino);
+    color: var(--blanco);
+    padding-block: var(--e5) var(--e12);
+  }
+  .volver a {
+    color: var(--texto-claro);
+    font-size: 0.9375rem;
+  }
+  .volver a:hover {
+    color: var(--blanco);
+  }
+  h1 {
+    margin-top: var(--e3);
+    font-size: clamp(2.25rem, 6vw, 4rem);
+    letter-spacing: -0.02em;
+  }
+  .bajada {
+    margin-top: var(--e2);
+    max-width: 720px;
+    font-size: clamp(1.125rem, 2.2vw, 1.375rem);
+    color: var(--morado);
+    font-family: var(--titulos);
+    font-weight: 500;
+  }
+  .portada {
+    margin-top: calc(var(--e8) * -1);
+  }
+  .portada :global(img) {
+    width: 100%;
+    border-radius: var(--radio);
+    border: 1px solid var(--borde);
+    box-shadow: 0 16px 48px rgba(2, 4, 38, 0.16);
+  }
+  .cuerpo {
+    display: grid;
+    gap: var(--e6);
+    padding-top: var(--e8);
+  }
+  .ficha {
+    background: var(--marino);
+    color: var(--texto-claro);
+    border-radius: var(--radio);
+    padding: var(--e3);
+    display: flex;
+    flex-direction: column;
+    gap: var(--e4);
+    align-self: start;
+  }
+  dl {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--e2);
+  }
+  dt {
+    font-family: var(--titulos);
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--morado);
+    margin-bottom: 4px;
+  }
+  dd {
+    margin: 0;
+    font-size: 0.9375rem;
+    color: var(--blanco);
+  }
+  .indice .rotulo {
+    margin-bottom: var(--e2);
+  }
+  .indice ol {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    counter-reset: seccion;
+  }
+  .indice a {
+    color: var(--texto-claro);
+    text-decoration: none;
+    font-size: 0.9375rem;
+    display: block;
+    padding-block: 4px;
+  }
+  .indice a::before {
+    counter-increment: seccion;
+    content: counter(seccion, decimal-leading-zero);
+    font-family: var(--titulos);
+    color: var(--morado);
+    margin-right: var(--e1);
+    font-size: 0.8125rem;
+  }
+  .indice a:hover {
+    color: var(--blanco);
+    text-decoration: underline;
+  }
+  .ficha-botones {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e1);
+  }
+  .ficha-botones .boton {
+    justify-content: center;
+  }
+  @media (max-width: 1023px) {
+    .indice {
+      display: none;
+    }
+  }
+  @media (min-width: 1024px) {
+    .cuerpo {
+      grid-template-columns: 280px minmax(0, 1fr);
+      gap: var(--e8);
+    }
+    .ficha {
+      position: sticky;
+      top: var(--e3);
+    }
+  }
+
+  /* ---------- Texto del caso (viene del texto.md) ---------- */
+  .texto-caso {
+    max-width: 720px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--e8);
+  }
+  .texto-caso :global(.seccion-caso) {
+    scroll-margin-top: var(--e3);
+    display: flex;
+    flex-direction: column;
+    gap: var(--e2);
+  }
+  .texto-caso :global(.seccion-caso > h2) {
+    font-family: var(--titulos);
+    font-weight: 700;
+    font-size: 0.875rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--azul);
+    padding-bottom: var(--e1);
+    border-bottom: 1px solid var(--borde);
+    margin-bottom: var(--e1);
+  }
+  .texto-caso :global(h3) {
+    font-size: 1.375rem;
+    margin-top: var(--e2);
+  }
+  .texto-caso :global(ul),
+  .texto-caso :global(ol) {
+    padding-left: var(--e3);
+    display: flex;
+    flex-direction: column;
+    gap: var(--e1);
+  }
+  .texto-caso :global(strong) {
+    font-weight: 700;
+  }
+  .texto-caso :global(blockquote) {
+    margin: var(--e1) 0;
+    padding: var(--e2) var(--e3);
+    border-left: 4px solid var(--morado);
+    background: var(--lavanda);
+    border-radius: 0 var(--radio) var(--radio) 0;
+    font-family: var(--titulos);
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+  .texto-caso :global(img) {
+    width: 100%;
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    margin-block: var(--e1);
+  }
+  @media (min-width: 1024px) {
+    /* Las capturas pueden ocupar más ancho que el texto */
+    .texto-caso :global(p:has(> img)) {
+      width: min(100%, 880px);
+    }
+  }
+  .texto-caso :global(table) {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 0.9375rem;
+  }
+  .texto-caso :global(th),
+  .texto-caso :global(td) {
+    text-align: left;
+    padding: var(--e1) var(--e2) var(--e1) 0;
+    border-bottom: 1px solid var(--borde);
+    vertical-align: top;
+  }
+  .texto-caso :global(th) {
+    font-family: var(--titulos);
+  }
+</style>

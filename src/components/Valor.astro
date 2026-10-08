@@ -1,0 +1,13 @@
+---
+// Muestra un dato del caso; si falta o empieza con [PENDIENTE, lo resalta como pendiente.
+import { esPendiente } from '../lib/contenido';
+import { textos, type Idioma } from '../i18n/textos';
+
+interface Props {
+  valor?: string;
+  idioma: Idioma;
+}
+const { valor, idioma } = Astro.props;
+---
+
+{esPendiente(valor) ? <span class="pendiente">{valor || textos[idioma].pendiente}</span> : valor}
