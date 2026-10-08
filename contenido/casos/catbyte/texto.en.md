@@ -3,9 +3,9 @@
 traduccion: por revisar
 titulo: Catbyte
 bajada: A platform to build your ideal computer, understand it and make it your own
-rol: Research, analysis and proposal (as a pair)
-resumen: UX/UI bootcamp project. An online store for custom computers, consoles and geek products, with step-by-step guidance so even people who don't know about hardware can make good decisions.
-origen: UX/UI Design Bootcamp · BIT - Bogotá Institute of Technology
+rol: Research and proposal as a pair · Self-initiated prototype and design library
+resumen: Research and proposal for a custom computer store, developed as a pair during the bootcamp. I later continued independently with the prototype and design system library to turn the proposal into a guided shopping experience.
+origen: UX/UI bootcamp at BIT · Independent product design continuation
 periodo: Sep – Dec 2025
 equipo: Valeria Garzón and Lianna González
 portada: ./01-portada.jpg
@@ -13,10 +13,12 @@ portadaAlt: Catbyte project cover, with the logo of a cat biting a game controll
 destacado: true
 borrador: false
 orden: 3
-estado: Bootcamp project · Research documented; UI system in progress
+estado: Bootcamp research · Self-initiated prototype and design library in progress
 ---
 
 ## Summary
+
+**Two stages with different scopes.** Research and the value proposition were the bootcamp deliverable, developed with Lianna González. I later chose to continue independently to build the prototype and design system library. This second stage was not part of the academic deliverable.
 
 Catbyte is a proposal for a trustworthy, appealing platform to buy custom computers (built around each person's needs and taste), consoles, controllers and geek and otaku products. What sets it apart is step-by-step guidance, so even people who don't know about hardware can make good decisions.
 
@@ -96,7 +98,7 @@ Two needs from the research shaped the proposal:
 
 Catbyte's identity, a gamer cat with an urban look and neon accents, was designed to connect with a young, creative and geek audience, in contrast with the cold look of high-performance brands.
 
-**Current status.** The poster documents research and the proposal. I am developing the UI system; components, states and complete flows will be added when ready.
+**Independent continuation.** The poster documents the bootcamp deliverable: research and proposal. I later continued building the prototype and design system library on my own initiative, outside the academic scope. This stage is in progress; components, states and complete flows will be added as they are ready.
 
 ## Validation
 

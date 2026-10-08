@@ -4,9 +4,9 @@
 # Las fotos de los user personas no se publican: son personas reales.
 titulo: Catbyte
 bajada: Una plataforma para armar el computador ideal, entenderlo y sentirlo propio
-rol: Investigación, análisis y propuesta (en dupla)
-resumen: Proyecto del bootcamp de UX/UI. Una tienda en línea de computadores personalizados, consolas y productos geek, con asesoría paso a paso para que incluso quien no sabe de hardware pueda decidir bien.
-origen: Bootcamp de Diseño UX/UI · BIT - Bogotá Institute of Technology
+rol: Investigación y propuesta en dupla · Prototipo y librería de diseño por iniciativa propia
+resumen: Investigación y propuesta de una tienda de computadores personalizados desarrolladas en dupla durante el bootcamp. Después continué por iniciativa propia con el prototipo y la librería del sistema de diseño para llevar la propuesta a una experiencia de compra guiada.
+origen: Bootcamp UX/UI en BIT · Continuación personal de diseño de producto
 periodo: Sep – Dic 2025
 equipo: Valeria Garzón y Lianna González
 portada: ./01-portada.jpg
@@ -14,10 +14,12 @@ portadaAlt: Portada del proyecto Catbyte, con el logo de un gato que muerde un c
 destacado: true
 borrador: false
 orden: 3
-estado: Proyecto formativo · Investigación documentada; sistema UI en desarrollo
+estado: Investigación del bootcamp · Prototipo y librería de diseño en desarrollo por iniciativa propia
 ---
 
 ## Resumen
+
+**Dos etapas con alcances distintos.** La investigación y la propuesta de valor fueron el entregable del bootcamp, realizado con Lianna González. Después decidí continuar el proyecto por iniciativa propia para construir el prototipo y la librería del sistema de diseño. Esa segunda etapa no formó parte del entregable académico.
 
 Catbyte es una propuesta de plataforma confiable y atractiva para comprar computadores personalizados (armados según las necesidades y gustos de cada persona), consolas, mandos y productos geek y otakus. Su diferencial es la asesoría paso a paso, para que incluso quienes no saben de hardware puedan tomar buenas decisiones.
 
@@ -97,7 +99,7 @@ De la investigación salieron dos necesidades que definieron la propuesta:
 
 La identidad de Catbyte, un gato gamer con estética urbana y acentos neón, se pensó para conectar con un público joven, creativo y geek, en contraste con la estética fría de las marcas de alto rendimiento.
 
-**Estado actual.** La lámina documenta la investigación y la propuesta. Estoy desarrollando el sistema de UI; los componentes, estados y flujos completos se incorporarán cuando estén listos.
+**Continuación por iniciativa propia.** La lámina documenta el entregable del bootcamp: investigación y propuesta. Después continué con la construcción del prototipo y la librería del sistema de diseño, fuera del alcance académico. Esta etapa está en desarrollo; incorporaré los componentes, estados y flujos completos conforme estén listos.
 
 ## Validación
 

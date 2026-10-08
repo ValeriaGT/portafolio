@@ -75,3 +75,5 @@ Prioriza dos casos profesionales completos y un tercero que complemente sus fort
 - Catbyte: la lámina original confirma investigación y propuesta, y permite documentar conteos de selección. No documenta pruebas con cinco usuarios; se retiró esa afirmación del caso. El sistema de UI está en desarrollo y será su principal aporte complementario a los casos profesionales.
 - myCal: la persona y el escenario parten del brief de selección, no de investigación primaria.
 - Museo Carmona: existe feedback indirecto del artista sobre buena recepción y navegación de representantes; no pruebas realizadas por Valeria con esa audiencia.
+
+- Catbyte tiene dos etapas: investigación y propuesta en dupla como entregable del bootcamp; prototipo y librería del sistema de diseño como continuación posterior por iniciativa propia de Valeria, fuera del alcance académico.
