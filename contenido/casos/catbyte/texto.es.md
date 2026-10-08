@@ -7,7 +7,7 @@ bajada: Una plataforma para armar el computador ideal, entenderlo y sentirlo pro
 rol: Investigación, análisis y propuesta (en dupla)
 resumen: Proyecto del bootcamp de UX/UI. Una tienda en línea de computadores personalizados, consolas y productos geek, con asesoría paso a paso para que incluso quien no sabe de hardware pueda decidir bien.
 origen: Bootcamp de Diseño UX/UI · BIT - Bogotá Institute of Technology
-periodo: "[PENDIENTE: mes y año]"
+periodo: Sep – Dic 2025
 equipo: Valeria Garzón y Lianna González
 portada: ./01-portada.jpg
 portadaAlt: Portada del proyecto Catbyte, con el logo de un gato que muerde un control de videojuegos y los nombres Valeria Garzón y Lianna González.
@@ -89,7 +89,9 @@ La identidad de Catbyte, un gato gamer con estética urbana y acentos neón, se 
 
 La encuesta validó las necesidades y priorizó las funcionalidades: la mayoría prefiere una asesoría híbrida, entre IA y humano, y las herramientas mejor valoradas fueron el cotizador en tiempo real, las recomendaciones por uso y presupuesto y el comparador.
 
-[PENDIENTE: si la propuesta o un prototipo se probó con usuarios]
+Después, validamos la propuesta con **5 usuarios**.
+
+[PENDIENTE: qué encontraron esos 5 usuarios y qué cambió en la propuesta]
 
 ## Solución final
 

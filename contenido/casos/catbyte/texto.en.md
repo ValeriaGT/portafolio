@@ -6,7 +6,7 @@ bajada: A platform to build your ideal computer, understand it and make it your 
 rol: Research, analysis and proposal (as a pair)
 resumen: UX/UI bootcamp project. An online store for custom computers, consoles and geek products, with step-by-step guidance so even people who don't know about hardware can make good decisions.
 origen: UX/UI Design Bootcamp · BIT - Bogotá Institute of Technology
-periodo: "[PENDING: month and year]"
+periodo: Sep – Dec 2025
 equipo: Valeria Garzón and Lianna González
 portada: ./01-portada.jpg
 portadaAlt: Catbyte project cover, with the logo of a cat biting a game controller and the names Valeria Garzón and Lianna González.
@@ -88,7 +88,9 @@ Catbyte's identity, a gamer cat with an urban look and neon accents, was designe
 
 The survey validated the needs and prioritized the features: most people prefer hybrid guidance, between AI and a human, and the best-rated tools were the real-time quote, recommendations by use and budget, and the comparison.
 
-[PENDING: whether the proposal or a prototype was tested with users]
+We then validated the proposal with **5 users**.
+
+[PENDING: what those 5 users found and what changed in the proposal]
 
 ## Final solution
 
