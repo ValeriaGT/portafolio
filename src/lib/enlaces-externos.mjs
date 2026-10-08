@@ -4,7 +4,7 @@ const AVISO = { es: 'se abre en otra pestaña', en: 'opens in a new tab' };
 
 function recorrer(nodo, idioma) {
   for (const hijo of nodo.children || []) {
-    if (hijo.type === 'element' && hijo.tagName === 'a' && /^https?:\/\//.test(hijo.properties?.href || '')) {
+    if (hijo.type === 'element' && hijo.tagName === 'a' && /^https?:\/\/|prototipos\//.test(hijo.properties?.href || '')) {
       hijo.properties.target = '_blank';
       hijo.properties.rel = ['noopener', 'noreferrer'];
       hijo.children.push(

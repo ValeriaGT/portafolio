@@ -4,7 +4,7 @@ import { render } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import { textos, type Idioma } from '../i18n/textos';
 import { SECCIONES } from '../lib/secciones.mjs';
-import { ruta } from '../lib/rutas';
+import { ruta, url } from '../lib/rutas';
 import Valor from '../components/Valor.astro';
 import type { casosDe } from '../lib/contenido';
 
@@ -17,6 +17,8 @@ const { idioma, caso } = Astro.props;
 const { data } = caso;
 const t = textos[idioma];
 const { Content } = await render(caso);
+// Un prototipo puede ser una URL externa o una ruta dentro del portafolio
+const prototipo = data.prototipo && (/^https?:/.test(data.prototipo) ? data.prototipo : url(data.prototipo));
 const titulo = data.titulo ?? t.pendiente;
 
 const ficha = [
@@ -103,7 +105,7 @@ const ficha = [
           }
           {
             data.prototipo && (
-              <a class="boton boton-secundario" href={data.prototipo} target="_blank" rel="noopener noreferrer">
+              <a class="boton boton-secundario" href={prototipo} target="_blank" rel="noopener noreferrer">
                 {t.verPrototipo} ↗
                 <span class="visualmente-oculto"> ({t.nuevaPestana})</span>
               </a>

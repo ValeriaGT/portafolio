@@ -12,6 +12,7 @@ equipo: Initiative under review, not yet launched
 herramientas: [Databricks, Qualtrics]
 portada: ./01-composicion-y-comparador.png
 portadaAlt: Portfolio management screen with the current allocation on the left and the new one on the right. The comparison shows the user's profile is Prudent and the new allocation is Aggressive, with the 12-month return and a trend chart against the current allocation.
+prototipo: prototipos/gestion-portafolios/index.html
 destacado: true
 orden: 2
 ---
@@ -122,7 +123,7 @@ Synthetic agents help catch problems early, but they don't replace real users. T
 
 ## Final solution
 
-A clickable prototype of the **I make it easy** move, on desktop and mobile: choose how to invest, choose the account, build the allocation and confirm. The screens are in Spanish.
+A [clickable prototype](../../../prototipos/gestion-portafolios/index.html) of the **I make it easy** move, on desktop and mobile: choose how to invest, choose the account, build the allocation and confirm. The screens are in Spanish.
 
 **Choose how to invest.** Users decide whether to delegate management to the advisory service or manage on their own with execution-only, with the difference explained in plain language.
 

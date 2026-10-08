@@ -24,7 +24,8 @@ const casos = defineCollection({
       portadaAlt: z.string().optional(),
       destacado: z.boolean().default(false),
       orden: z.number().default(99),
-      prototipo: z.string().url().optional(),
+      // URL completa o ruta dentro del sitio (ej. prototipos/mi-caso/)
+      prototipo: z.string().optional(),
       sitio: z.string().url().optional(),
       borrador: z.boolean().default(false),
       traduccion: z.string().optional(),

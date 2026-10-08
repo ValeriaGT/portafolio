@@ -1,5 +1,6 @@
 ---
-# Fuente: presentación y prototipo de "Gestión de portafolios 2.0" (versión con marca, no enlazada).
+# Fuente: presentación y prototipo de "Gestión de portafolios 2.0". La versión con marca no se enlaza;
+# el prototipo enlazado es una copia sin marca en public/prototipos/gestion-portafolios/.
 # Caso anonimizado: sin nombre de la empresa, sin cifras absolutas de clientes ni AUM,
 # sin nombres de segmentos comerciales. Las capturas salen de una copia del prototipo sin logo ni colores de marca.
 # Los Aprendizajes los redactó Claude. La Validación sale de una revisión con agentes sintéticos corrida en oct 2026 (no es la prueba original): revisa ambos y ajústalos a tu voz.
@@ -13,6 +14,7 @@ equipo: Iniciativa en revisión, aún no lanzada
 herramientas: [Databricks, Qualtrics]
 portada: ./01-composicion-y-comparador.png
 portadaAlt: Pantalla de gestión de portafolios con la composición actual a la izquierda y la nueva a la derecha. El comparador muestra que el perfil del usuario es Prudente y la nueva composición es Agresiva, con el rendimiento de 12 meses y una gráfica de tendencia frente a la composición actual.
+prototipo: prototipos/gestion-portafolios/index.html
 destacado: true
 orden: 2
 ---
@@ -123,7 +125,7 @@ Los agentes sintéticos sirven para detectar problemas temprano, pero no reempla
 
 ## Solución final
 
-Un prototipo navegable del movimiento **Te lo hago fácil**, en escritorio y móvil: elegir cómo invertir, elegir el contrato, armar la composición y confirmar.
+Un [prototipo navegable](../../prototipos/gestion-portafolios/index.html) del movimiento **Te lo hago fácil**, en escritorio y móvil: elegir cómo invertir, elegir el contrato, armar la composición y confirmar.
 
 **Elegir cómo invertir.** El usuario decide si delega la gestión al servicio de asesoría o gestiona por su cuenta con solo ejecución, con la diferencia explicada en lenguaje simple.
 
