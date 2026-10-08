@@ -11,8 +11,8 @@ equipo: Grupo 4 · Daniela Rodriguez, Valeria Garzón y Brenda Chacaltana
 portada: ./02-okrs-completos.png
 portadaAlt: Pantalla de OKRs de Acelera con un banner verde que dice "Tus OKRs ya están completos — crea un proyecto en el Roadmap Estratégico" y un botón para ir al Roadmap.
 prototipo: https://valeriagt.github.io/acelera-prototipo/
-destacado: true
-orden: 3
+destacado: false
+orden: 5
 estado: Proyecto formativo · Experimento diseñado, sin ejecutar
 ---
 

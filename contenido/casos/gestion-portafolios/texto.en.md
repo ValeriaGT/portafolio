@@ -20,6 +20,8 @@ estado: Proposal and prototype · Customer testing pending
 
 ## Summary
 
+**End of my involvement.** My time at the company ended at this stage: proposal, prototype and preliminary review. I did not take part in implementation or subsequent customer testing and have no later outcomes to report.
+
 The portfolio management portal worked like a service window: it let users complete the transaction, but didn't support them in the most important decision, what to do with their money. Very few clients with digital access used it, and almost everyone who came in didn't come back.
 
 Based on 6 months of real portal behavior and users' own words, I proposed a product vision in three moves: **I reach out, I explain, I make it easy**. I prototyped the third one end to end, on desktop and mobile, and put it through a preliminary review with synthetic agents representing the client segments.

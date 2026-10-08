@@ -11,10 +11,10 @@ periodo: Sep – Dic 2025
 equipo: Valeria Garzón y Lianna González
 portada: ./01-portada.jpg
 portadaAlt: Portada del proyecto Catbyte, con el logo de un gato que muerde un control de videojuegos y los nombres Valeria Garzón y Lianna González.
-destacado: false
-borrador: true
-orden: 5
-estado: Proyecto formativo · Investigación y propuesta
+destacado: true
+borrador: false
+orden: 3
+estado: Proyecto formativo · Investigación documentada; sistema UI en desarrollo
 ---
 
 ## Resumen
@@ -76,6 +76,18 @@ La propuesta buscaba un impacto en tres frentes:
 
 ![Resultados de la encuesta: obstáculos al comprar tecnología, tipo de asesoría preferida y si han armado un PC personalizado](./05-encuesta.jpg)
 
+**Preferencias expresadas en la encuesta.** La lámina presenta estos conteos de selección; no son tasas de éxito de tareas ni resultados de un producto en uso.
+
+| Herramienta propuesta | Selecciones |
+| --- | --- |
+| Cotizador con precio total en tiempo real | 11 |
+| Recomendaciones según uso y presupuesto | 9 |
+| Comparador de componentes y rendimiento | 9 |
+| Visualizador 3D | 8 |
+| Marketplace para vender o intercambiar equipos | 3 |
+
+El rendimiento recibió 11 selecciones como aspecto a personalizar, frente a 5 para iluminación RGB y 4 para color y forma del chasis. Las motivaciones más seleccionadas fueron mejorar el rendimiento (12) y ahorrar al elegir piezas (9). Esto orienta la propuesta hacia utilidad y presupuesto, además de la estética. La lámina no especifica la muestra total ni si cada pregunta permitía varias respuestas.
+
 ## Proceso de diseño
 
 De la investigación salieron dos necesidades que definieron la propuesta:
@@ -85,19 +97,35 @@ De la investigación salieron dos necesidades que definieron la propuesta:
 
 La identidad de Catbyte, un gato gamer con estética urbana y acentos neón, se pensó para conectar con un público joven, creativo y geek, en contraste con la estética fría de las marcas de alto rendimiento.
 
-[PENDIENTE: si hubo arquitectura de información, wireframes o prototipo después de la propuesta]
+**Estado actual.** La lámina documenta la investigación y la propuesta. Estoy desarrollando el sistema de UI; los componentes, estados y flujos completos se incorporarán cuando estén listos.
 
 ## Validación
 
-La encuesta validó las necesidades y priorizó las funcionalidades: la mayoría prefiere una asesoría híbrida, entre IA y humano, y las herramientas mejor valoradas fueron el cotizador en tiempo real, las recomendaciones por uso y presupuesto y el comparador.
+La encuesta recoge necesidades y preferencias declaradas: el 50% prefiere una combinación de guía automática y asesor humano, y el cotizador, las recomendaciones y el comparador concentran las selecciones. Esto orienta la propuesta, pero no demuestra que la interfaz sea usable ni que la intención se convierta en compra.
 
-Después, validamos la propuesta con **5 usuarios**.
+La lámina no documenta pruebas de usabilidad, hallazgos de cinco participantes ni cambios posteriores a una prueba. La evaluación de los flujos queda pendiente mientras desarrollo el sistema de UI.
 
-[PENDIENTE: qué encontraron esos 5 usuarios y qué cambió en la propuesta]
+### Iteración propuesta: revisión simulada desde cinco perfiles
+
+**Método y límite.** Esta revisión es un ejercicio de escenarios redactado con ayuda de IA a partir de la investigación documentada. No participaron cinco personas reales, no se recorrió una interfaz funcional y las observaciones no son testimonios ni resultados de usabilidad. Sirve para preparar la siguiente iteración del sistema UI en desarrollo.
+
+| Perfil simulado | Posible dificultad a explorar | Cambio propuesto para la siguiente iteración |
+| --- | --- | --- |
+| Estudiante con presupuesto limitado | No saber si el precio inicial incluye todo lo necesario para usar el equipo. | Mostrar presupuesto disponible, precio total y elementos incluidos; explicar cada cambio de precio. |
+| Diseñadora con poco conocimiento de hardware | No poder traducir CPU, GPU y RAM a las necesidades de sus programas. | Empezar por tareas y programas de uso; explicar por qué se recomienda cada componente en lenguaje simple. |
+| Gamer que conoce componentes | Sentir que la recomendación automática le impide elegir y comparar alternativas. | Permitir edición manual y comparación de componentes; mostrar avisos de compatibilidad y sus motivos. |
+| Persona que compra su primer PC personalizado | Dudar de la compatibilidad, la garantía y a quién acudir si algo falla. | Hacer visibles soporte, garantía y compatibilidad antes de confirmar; ofrecer acceso a un asesor humano. |
+| Persona que prioriza la estética | Interpretar el visualizador como una representación exacta del producto final. | Diferenciar vista ilustrativa y configuración seleccionada; mostrar componentes, colores y limitaciones de la vista. |
+
+**Orden propuesto de trabajo.** Primero, diseñar el flujo de uso y presupuesto → recomendación → edición de componentes → resumen de precio y compatibilidad → ayuda o confirmación. Después, definir sus componentes y estados de carga, vacío, error y éxito. El visualizador 3D queda como exploración posterior, ya que en la encuesta el cotizador, las recomendaciones y el comparador recibieron más selecciones.
+
+**Cómo comprobar esta iteración con personas reales.** Probar el prototipo con cinco participantes que cubran distintos niveles de conocimiento y presupuesto. Pedirles elegir un equipo para un uso concreto, mantenerlo dentro del presupuesto, cambiar un componente, explicar el precio y la compatibilidad, y encontrar ayuda y garantía. Registrar finalización sin ayuda, errores, dudas y comprensión; observar qué necesita cambiar antes de una segunda ronda. Una muestra pequeña permite detectar problemas, pero no estimar resultados para todo el mercado.
+
+**Estado de la iteración.** Cambios propuestos; pendientes de diseño y pruebas. No se reportan mejoras logradas ni puntuaciones de participantes.
 
 ## Solución final
 
-Una plataforma para:
+**Propuesta de solución, aún en desarrollo.** Una plataforma para:
 
 - **Comprar todo en un solo lugar**, con garantía y soporte.
 - **Elegir cada componente:** CPU, GPU, RAM, chasis, luces y periféricos.

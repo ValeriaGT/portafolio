@@ -22,6 +22,8 @@ estado: Propuesta y prototipo · Pendiente de pruebas con clientes
 
 ## Resumen
 
+**Cierre de mi participación.** Mi trabajo en la empresa terminó cuando la iniciativa estaba en este punto: propuesta, prototipo y revisión preliminar. No participé en una implementación ni en pruebas posteriores con clientes y no tengo resultados posteriores que reportar.
+
 El portal de gestión de portafolios funcionaba como una ventanilla: dejaba hacer la operación, pero no acompañaba al usuario en la decisión más importante, qué hacer con su dinero. Muy pocos clientes con acceso digital lo usaban, y casi todos los que entraban no volvían.
 
 Con base en 6 meses de comportamiento real del portal y en la voz de los usuarios, propuse una visión de producto en tres movimientos: **Te llamo, Te explico y Te lo hago fácil**. Prototipé el tercero completo, en escritorio y en móvil, y lo sometí a una revisión preliminar con agentes sintéticos que representan los segmentos de clientes.

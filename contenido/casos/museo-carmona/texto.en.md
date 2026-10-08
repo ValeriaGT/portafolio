@@ -44,6 +44,8 @@ The artist wanted a space to publish all of his work and present it in different
 
 ## Validation
 
+**Follow-up feedback reported by the artist.** The artist told me he showed the website to several art representatives, who liked it and could browse his work easily in an organized presentation. This is indirect feedback about the site; I did not conduct usability tests with those representatives.
+
 The site was validated with the artist and refined over several iterations with him until it reached the published version.
 
 ## Final solution

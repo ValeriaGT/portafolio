@@ -68,3 +68,10 @@ El sitio conserva las siete secciones existentes. Usa esa estructura para contar
 ## Antes de enviar candidaturas
 
 Prioriza dos casos profesionales completos y un tercero que complemente sus fortalezas. Comprueba en móvil la legibilidad de las imágenes, enlaces de prototipos, correo y descarga de CV. Ensaya explicar cada caso en cinco minutos: problema, tu decisión más difícil, evidencia y resultado. Puedes adaptar el orden de los casos al tipo de vacante sin cambiar los hechos.
+
+## Aclaraciones y nueva fuente aportadas por Valeria
+
+- Gestión de portafolios: la participación terminó al salir de la empresa en la fase documentada. Las pruebas con clientes son un siguiente paso del producto, no un requisito que Valeria pueda completar allí.
+- Catbyte: la lámina original confirma investigación y propuesta, y permite documentar conteos de selección. No documenta pruebas con cinco usuarios; se retiró esa afirmación del caso. El sistema de UI está en desarrollo y será su principal aporte complementario a los casos profesionales.
+- myCal: la persona y el escenario parten del brief de selección, no de investigación primaria.
+- Museo Carmona: existe feedback indirecto del artista sobre buena recepción y navegación de representantes; no pruebas realizadas por Valeria con esa audiencia.

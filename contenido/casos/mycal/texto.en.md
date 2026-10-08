@@ -27,6 +27,8 @@ This was a design exercise for a job application. I took it from user definition
 
 ## Research
 
+**Profile source.** The persona and scenario in this exercise come from the hiring brief, not interviews with real users. The empathy map and journey develop that scenario as design hypotheses.
+
 **User persona.** Valentina, 28, lives in New York and leads sales and business development for a big agency. She travels 3 out of 4 weeks a month, almost always internationally, and mainly uses her mobile phone.
 
 - **Wants:** an intelligent calendar to make sure she is always on time for her meetings.

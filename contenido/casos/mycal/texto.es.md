@@ -30,6 +30,8 @@ Fue un ejercicio de diseño para aplicar a un trabajo. Lo llevé desde la defini
 
 ## Investigación
 
+**Fuente de los perfiles.** La persona y el escenario de este ejercicio parten del brief de selección, no de entrevistas a usuarios reales. El mapa de empatía y el journey desarrollan ese escenario como hipótesis de diseño.
+
 **User persona.** Valentina tiene 28 años, vive en Nueva York y lidera ventas y desarrollo de negocio en una agencia grande. Viaja 3 de cada 4 semanas al mes, casi siempre fuera del país, y usa sobre todo el celular.
 
 - **Quiere:** un calendario inteligente que le asegure llegar siempre a tiempo a sus reuniones.

@@ -83,6 +83,12 @@ Tras descartar estas dos hipótesis, pivotamos hacia quienes estaban transforman
 
 **La decisión final.** En vez de convencer a finfluencers existentes de vender para Skandia, decidimos crear asesores digitales desde cero y darles una plataforma que los ayudara.
 
+### Decisión de producto a partir de los experimentos
+
+Los resultados cambiaron el enfoque: el matching no generó leads y la autoasesoría produjo 5 leads sin cierres. En lugar de profundizar esos flujos, el equipo pasó a explorar el trabajo de los finfluencers y después a formar asesores digitales nuevos. Mi contribución incluyó construir los experimentos, analizar su respuesta y diseñar la plataforma que acompañaría ese nuevo modelo.
+
+La [presentación del proyecto](https://www.figma.com/slides/yMcpf0lynuJrNKK5oJlSms) documenta este recorrido y el acompañamiento en producción; no incluye cifras comparativas de impacto posterior al lanzamiento.
+
 ## Proceso de diseño
 
 **Taller de drivers y barreras.** Lo hice con 12 usuarios y definí los pain points más importantes para empezar a trabajar con una matriz de impacto y esfuerzo:

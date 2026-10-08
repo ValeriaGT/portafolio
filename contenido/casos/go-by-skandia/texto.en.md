@@ -84,6 +84,12 @@ After discarding these two hypotheses, we pivoted toward the people who were tra
 
 **The final decision.** Instead of convincing existing finfluencers to sell for Skandia, we decided to create digital advisors from scratch and give them a platform to help them.
 
+### Product decision informed by experiments
+
+The results changed the direction: matching generated no leads, and self-advisory generated 5 leads with no sales. Instead of expanding those flows, the team explored finfluencers and then shifted to training new digital advisors. My contribution included building experiments, analyzing responses and designing the platform to support that new model.
+
+The [project presentation](https://www.figma.com/slides/yMcpf0lynuJrNKK5oJlSms) documents this journey and production support; it does not include comparative post-launch impact figures.
+
 ## Design process
 
 **Drivers and barriers workshop.** I ran it with 12 users and defined the most important pain points to start working with an impact/effort matrix:

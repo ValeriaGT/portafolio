@@ -10,10 +10,10 @@ periodo: Sep – Dec 2025
 equipo: Valeria Garzón and Lianna González
 portada: ./01-portada.jpg
 portadaAlt: Catbyte project cover, with the logo of a cat biting a game controller and the names Valeria Garzón and Lianna González.
-destacado: false
-borrador: true
-orden: 5
-estado: Bootcamp project · Research and proposal
+destacado: true
+borrador: false
+orden: 3
+estado: Bootcamp project · Research documented; UI system in progress
 ---
 
 ## Summary
@@ -75,6 +75,18 @@ The proposal aimed for impact on three fronts:
 
 ![Survey results: obstacles when buying technology, preferred type of guidance and whether they've built a custom PC. In Spanish](./05-encuesta.jpg)
 
+**Survey preferences.** The poster reports the following selection counts; these are not task success rates or outcomes from a live product.
+
+| Proposed tool | Selections |
+| --- | --- |
+| Quote with total price in real time | 11 |
+| Recommendations by use and budget | 9 |
+| Component and performance comparison | 9 |
+| 3D preview | 8 |
+| Marketplace to sell or exchange equipment | 3 |
+
+Performance received 11 selections as an aspect to customize, compared with 5 for RGB lighting and 4 for case color and shape. The most selected motivations were improving performance (12) and saving money when choosing parts (9). This supports a focus on utility and budget alongside aesthetics. The poster does not specify the total sample or whether each question allowed multiple answers.
+
 ## Design process
 
 Two needs from the research shaped the proposal:
@@ -84,19 +96,35 @@ Two needs from the research shaped the proposal:
 
 Catbyte's identity, a gamer cat with an urban look and neon accents, was designed to connect with a young, creative and geek audience, in contrast with the cold look of high-performance brands.
 
-[PENDING: whether there was information architecture, wireframes or a prototype after the proposal]
+**Current status.** The poster documents research and the proposal. I am developing the UI system; components, states and complete flows will be added when ready.
 
 ## Validation
 
-The survey validated the needs and prioritized the features: most people prefer hybrid guidance, between AI and a human, and the best-rated tools were the real-time quote, recommendations by use and budget, and the comparison.
+The survey captures stated needs and preferences: 50% prefer a combination of automated guidance and a human advisor, while the quote, recommendations and comparison tools received the most selections. This informs the proposal, but does not establish interface usability or purchasing behavior.
 
-We then validated the proposal with **5 users**.
+The poster does not document usability tests, findings from five participants or changes following a test. Flow evaluation remains pending while I develop the UI system.
 
-[PENDING: what those 5 users found and what changed in the proposal]
+### Proposed iteration: simulated review from five profiles
+
+**Method and limits.** This is an AI-assisted scenario exercise based on the documented research. No five real participants took part, no functional interface was tested, and these observations are not testimonials or usability findings. They help prepare the next iteration of the UI system in progress.
+
+| Simulated profile | Potential difficulty to investigate | Proposed change for the next iteration |
+| --- | --- | --- |
+| Student on a limited budget | Not knowing whether the initial price includes everything needed to use the computer. | Show available budget, total price and included items; explain every price change. |
+| Designer with limited hardware knowledge | Not being able to relate CPU, GPU and RAM to the needs of their software. | Start with tasks and software; explain component recommendations in plain language. |
+| Gamer familiar with components | Feeling that automatic recommendations prevent choosing and comparing alternatives. | Allow manual editing and component comparisons; show compatibility warnings with explanations. |
+| First-time custom PC buyer | Doubting compatibility, warranty and who to contact if something fails. | Make support, warranty and compatibility visible before confirmation; provide access to a human advisor. |
+| Buyer focused on aesthetics | Treating the preview as an exact representation of the final product. | Distinguish an illustrative preview from the selected configuration; show components, colors and preview limitations. |
+
+**Proposed work order.** First design the flow: use and budget → recommendation → component editing → price and compatibility summary → help or confirmation. Then define components and loading, empty, error and success states. Explore the 3D preview later, since the quote, recommendations and comparison tools received more survey selections.
+
+**How to evaluate this iteration with real people.** Test the prototype with five participants covering different knowledge levels and budgets. Ask them to choose a computer for a specific use, keep it within budget, change a component, explain price and compatibility, and find help and warranty information. Record unassisted completion, errors, uncertainty and comprehension; identify changes before a second round. A small sample can reveal issues, but cannot estimate outcomes for the whole market.
+
+**Iteration status.** Proposed changes, pending design and testing. No achieved improvements or participant scores are reported.
 
 ## Final solution
 
-A platform to:
+**Proposed solution, still in development.** A platform to:
 
 - **Buy everything in one place**, with warranty and support.
 - **Choose each component:** CPU, GPU, RAM, case, lighting and peripherals.

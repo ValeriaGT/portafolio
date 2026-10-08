@@ -46,6 +46,8 @@ El artista quería un espacio para publicar toda su obra y poder presentarla en 
 
 ## Validación
 
+**Feedback posterior, comunicado por el artista.** El artista me contó que mostró la página a varios representantes de arte, que les gustó y pudieron ver sus obras de manera fácil y organizada. Es un testimonio indirecto sobre la recepción del sitio; no realicé pruebas de usabilidad con esos representantes.
+
 El sitio se validó con el artista y se refinó en varias iteraciones con él hasta llegar a la versión publicada.
 
 ## Solución final
