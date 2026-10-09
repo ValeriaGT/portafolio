@@ -12,7 +12,7 @@ telefono: +57 350 528 7642
 correo: valeria.garzont@gmail.com
 linkedin: https://www.linkedin.com/in/valeria-garzon-triana-productdesigner/
 fotoAlt: Valeria Garzón Triana
-bannerAlt: Illustration of Valeria working at her desk, surrounded by the icons of her tools, including Figma, Claude, VS Code, Databricks, Gemini and GitHub.
+bannerAlt: Figma, Claude, Visual Studio Code, Databricks, Gemini, GitHub and prototyping tool logos inside floating bubbles.
 herramientas:
   - Figma
   - Adobe XD

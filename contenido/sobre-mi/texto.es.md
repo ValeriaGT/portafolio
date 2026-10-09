@@ -3,7 +3,7 @@
   "frase": "Diseño experiencias digitales que ayudan a las personas a entender, decidir y actuar. Conecto investigación, diseño de interfaces y objetivos de negocio en productos fintech y B2B.",
   "alcance": "Más de 5 años de experiencia en fintech, proptech y plataformas B2B. En Skandia llevé una plataforma de asesoría digital desde la investigación hasta producción, junto a negocio e ingeniería.",
   "fotoAlt": "Valeria Garzón Triana",
-  "bannerAlt": "Ilustración de Valeria trabajando en su escritorio, rodeada de los íconos de sus herramientas, entre ellas Figma, Claude, VS Code, Databricks, Gemini y GitHub.",
+  "bannerAlt": "Logos de Figma, Claude, Visual Studio Code, Databricks, Gemini, GitHub y herramientas de prototipado dentro de burbujas flotantes.",
   "nombre": "Valeria Garzón Triana",
   "roles": [
     "Product Designer",

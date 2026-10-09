@@ -6,7 +6,7 @@ const fotos = import.meta.glob<{ default: ImageMetadata }>('/contenido/sobre-mi/
 });
 export const foto: ImageMetadata | undefined = Object.values(fotos)[0]?.default;
 
-const banners = import.meta.glob<{ default: ImageMetadata }>('/contenido/sobre-mi/banner.{jpg,jpeg,png,webp}', {
+const banners = import.meta.glob<{ default: ImageMetadata }>('/contenido/sobre-mi/banner-herramientas.png', {
   eager: true,
 });
 export const banner: ImageMetadata | undefined = Object.values(banners)[0]?.default;
