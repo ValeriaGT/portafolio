@@ -55,7 +55,7 @@ const sobreMi = defineCollection({
     experiencia: z
       .array(z.object({ cargo: z.string(), empresa: z.string(), periodo: z.string(), logros: z.array(z.string()).default([]) }))
       .default([]),
-    proyectos: z.array(z.object({ titulo: z.string(), periodo: z.string(), descripcion: z.string() })).default([]),
+    proyectos: z.array(z.object({ titulo: z.string(), periodo: z.string(), descripcion: z.string(), logros: z.array(z.string()).default([]) })).default([]),
     educacion: z.array(z.object({ titulo: z.string(), institucion: z.string(), periodo: z.string() })).default([]),
     idiomas: z.array(z.string()).default([]),
     certificaciones: z.array(z.object({ nombre: z.string(), entidad: z.string(), fecha: z.string() })).default([]),

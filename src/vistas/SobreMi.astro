@@ -102,10 +102,10 @@ const linkedinTexto = data.linkedin?.replace(/^https?:\/\/(www\.)?/, '').replace
         <div class="resumen"><Content /></div>
       </section>
 
-      <section aria-labelledby="t-herramientas">
+      {data.herramientas.length > 0 && <section aria-labelledby="t-herramientas">
         <h2 id="t-herramientas" class="rotulo">{t.herramientas}</h2>
         <ul class="etiquetas">{data.herramientas.map((h) => <li>{h}</li>)}</ul>
-      </section>
+      </section>}
 
       <section aria-labelledby="t-trayectoria">
         <h2 id="t-trayectoria" class="rotulo">{t.trayectoria}</h2>
@@ -139,7 +139,8 @@ const linkedinTexto = data.linkedin?.replace(/^https?:\/\/(www\.)?/, '').replace
             <div>
               <h3>{proyecto.titulo}</h3>
               <p class="periodo">{proyecto.periodo}</p>
-              <p>{proyecto.descripcion}</p>
+              {proyecto.descripcion && <p>{proyecto.descripcion}</p>}
+              {proyecto.logros.length > 0 && <ul>{proyecto.logros.map((logro) => <li>{logro}</li>)}</ul>}
             </div>
           ))}
         </section>
