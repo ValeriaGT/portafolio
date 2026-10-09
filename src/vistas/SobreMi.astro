@@ -4,6 +4,7 @@ import { render } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import { textos, type Idioma } from '../i18n/textos';
 import { sobreMiDe, avisar } from '../lib/contenido';
+import IconoContacto from '../components/IconoContacto.astro';
 import { foto, hojaDeVida } from '../lib/archivos';
 
 interface Props {
@@ -66,7 +67,7 @@ const linkedinTexto = data.linkedin?.replace(/^https?:\/\/(www\.)?/, '').replace
             data.habilidades.map((h) => (
               <div>
                 <dt>{h.grupo}</dt>
-                <dd>{h.items}</dd>
+                {h.items && <dd>{h.items}</dd>}
               </div>
             ))
           }
@@ -98,6 +99,7 @@ const linkedinTexto = data.linkedin?.replace(/^https?:\/\/(www\.)?/, '').replace
 
     <div class="principal">
       <section aria-labelledby="t-resumen">
+        {idioma === 'es' && <h2 class="titulo-perfil">Product Designer</h2>}
         <h2 id="t-resumen" class="rotulo">{t.resumenProfesional}</h2>
         <div class="resumen"><Content /></div>
       </section>
@@ -173,7 +175,7 @@ const linkedinTexto = data.linkedin?.replace(/^https?:\/\/(www\.)?/, '').replace
           {
             data.correo && (
               <div>
-                <dt>{t.correo}</dt>
+                <dt><IconoContacto tipo="correo" /> {t.correo}</dt>
                 <dd><a href={`mailto:${data.correo}`}>{data.correo}</a></dd>
               </div>
             )
@@ -181,7 +183,7 @@ const linkedinTexto = data.linkedin?.replace(/^https?:\/\/(www\.)?/, '').replace
           {
             data.telefono && (
               <div>
-                <dt>{t.telefono}</dt>
+                <dt><IconoContacto tipo="telefono" /> {t.telefono}</dt>
                 <dd><a href={telefonoHref}>{data.telefono}</a></dd>
               </div>
             )
@@ -189,7 +191,7 @@ const linkedinTexto = data.linkedin?.replace(/^https?:\/\/(www\.)?/, '').replace
           {
             data.linkedin && (
               <div>
-                <dt>LinkedIn</dt>
+                <dt><IconoContacto tipo="enlace" /> LinkedIn</dt>
                 <dd><a href={data.linkedin} target="_blank" rel="noopener noreferrer">{linkedinTexto}<span class="visualmente-oculto"> ({t.nuevaPestana})</span></a></dd>
               </div>
             )
@@ -197,7 +199,7 @@ const linkedinTexto = data.linkedin?.replace(/^https?:\/\/(www\.)?/, '').replace
           {
             data.ubicacion && (
               <div>
-                <dt>{idioma === 'es' ? 'Ubicación' : 'Location'}</dt>
+                <dt><IconoContacto tipo="ubicacion" /> {idioma === 'es' ? 'Ubicación' : 'Location'}</dt>
                 <dd>{data.ubicacion}</dd>
               </div>
             )
@@ -412,4 +414,9 @@ const linkedinTexto = data.linkedin?.replace(/^https?:\/\/(www\.)?/, '').replace
   .certificaciones span {
     color: var(--gris);
   }
+</style>
+
+<style>
+  .contacto dt { display: flex; align-items: center; gap: 8px; }
+  .titulo-perfil { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 16px; }
 </style>

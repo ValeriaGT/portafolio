@@ -7,52 +7,71 @@
   "nombre": "Valeria Garzón Triana",
   "roles": [
     "Product Designer",
-    "Diseñadora UX/UI"
+    "UX/UI · Product Owner · Fintech & B2B"
   ],
-  "ubicacion": "Bogotá, Colombia",
+  "ubicacion": "Colombia",
   "telefono": "+57 350 528 7642",
   "correo": "valeria.garzont@gmail.com",
   "linkedin": "https://www.linkedin.com/in/valeria-garzon-triana-productdesigner/",
-  "herramientas": [],
+  "herramientas": [
+    "Figma",
+    "Lovable",
+    "Dovetail",
+    "Maze",
+    "Useberry",
+    "Claude Code",
+    "Databricks",
+    "Azure",
+    "GitHub",
+    "Perplexity",
+    "HTML · CSS · JS"
+  ],
   "habilidades": [
     {
-      "grupo": "Diseño UX/UI",
-      "items": "flujos de usuario, arquitectura de información, wireframing, prototipado interactivo, diseño responsive y journey mapping."
+      "grupo": "Investigación de usuarios",
+      "items": ""
     },
     {
-      "grupo": "Investigación",
-      "items": "entrevistas, pruebas de usabilidad, síntesis cualitativa y análisis de comportamiento."
+      "grupo": "Pruebas de usabilidad",
+      "items": ""
     },
     {
-      "grupo": "Producto",
-      "items": "definición de alcance, priorización por impacto y esfuerzo, gestión de backlog y colaboración con negocio e ingeniería."
+      "grupo": "Wireframes y prototipado",
+      "items": ""
     },
     {
-      "grupo": "Herramientas",
-      "items": "Figma, Maze, Dovetail, Useberry, Databricks y Qualtrics. Prototipado asistido por IA con Claude Code y Lovable."
+      "grupo": "Gestión de backlog y priorización",
+      "items": ""
     },
     {
-      "grupo": "Implementación web",
-      "items": "HTML, CSS y JavaScript."
+      "grupo": "Diseño conversacional",
+      "items": ""
+    },
+    {
+      "grupo": "Scrum y metodologías ágiles",
+      "items": ""
     }
   ],
   "experiencia": [
     {
-      "cargo": "UX Diseñadora Web (funciones de Product Designer y Product Owner)",
+      "cargo": "UX Diseñadora Web · funciones de Product Designer y Product Owner",
       "empresa": "Skandia Colombia",
-      "periodo": "Septiembre 2022 - Octubre 2026",
+      "periodo": "sep 2022 – oct 2026",
       "logros": [
-        "Lideré la investigación para la plataforma Go by Skandia: entrevistas con 10 asesores financieros y 10 clientes, y exploración de perfiles de finfluencers.",
+        "Diseño y gestión del MVP — Go by Skandia, plataforma para asesores influencers",
+        "Lideré la investigación: entrevistas con 10 asesores financieros y 10 clientes, y exploración de perfiles de finfluencers.",
         "Facilité un taller de necesidades y barreras con 12 usuarios y realicé pruebas de usabilidad del prototipo con 8 participantes en Maze; los hallazgos orientaron la estructura y los flujos.",
         "Diseñé flujos, wireframes y prototipos para asesores digitales, y acompañé al equipo de desarrollo y a los usuarios durante el lanzamiento y las iteraciones en producción.",
         "Gestioné el backlog del MVP como Product Owner, priorizando por impacto y esfuerzo junto a negocio e ingeniería.",
-        "Analicé seis meses de comportamiento del portal en Databricks y desarrollé una propuesta y un prototipo para facilitar la gestión de inversiones. La iniciativa quedó en revisión al terminar mi participación."
+        "Rediseño del portal de clientes — propuesta para incentivar el uso recurrente",
+        "Rediseñé el portal a partir de pruebas con usuarios: incorporé su feedback en cada iteración y entregué a desarrollo prototipos hechos con vibe coding para la implementación.",
+        "Analicé el uso del portal en Databricks para proponer mejoras en la gestión de portafolios; la propuesta y su prototipo quedaron en revisión al terminar mi participación."
       ]
     },
     {
       "cargo": "Diseñadora UX/UI (Freelance)",
       "empresa": "Nivelics SAS",
-      "periodo": "Mayo 2022 - Junio 2022",
+      "periodo": "may 2022 – jun 2022",
       "logros": [
         "Diseñé pantallas, flujos, wireframes y prototipos de alta fidelidad para un portal de eventos de usuarios internos.",
         "Organicé la información y entregué prototipos para facilitar la revisión con el cliente y la implementación con desarrollo."
@@ -61,7 +80,7 @@
     {
       "cargo": "Diseñadora UI",
       "empresa": "Metrocuadrado",
-      "periodo": "Enero 2021 - Agosto 2022",
+      "periodo": "ene 2021 – ago 2022",
       "logros": [
         "Rediseñé módulos de back-office para inmobiliarias y constructoras, con foco en la organización de información y los flujos operativos B2B.",
         "Colaboré con producto y desarrollo para alinear las propuestas de interfaz con las necesidades del negocio."
@@ -70,84 +89,58 @@
     {
       "cargo": "Diseñadora y maquetadora web (Freelance)",
       "empresa": "Museo Carmona",
-      "periodo": "Septiembre 2021 - Diciembre 2021",
+      "periodo": "sep 2021 – dic 2021",
       "logros": [
         "Diseñé y construí el sitio del museo con HTML, CSS y JavaScript, con adaptación a pantallas móviles.",
         "Organicé la colección por técnica y definí la narrativa visual con el artista. Según su feedback, representantes de arte pudieron consultar las obras de forma fácil y organizada."
       ]
     }
   ],
-  "proyectos": [
-    {
-      "titulo": "Catbyte | Prototipo y librería del sistema de diseño",
-      "periodo": "En desarrollo - continuación por iniciativa propia",
-      "descripcion": "",
-      "logros": [
-        "Continué por iniciativa propia el diseño de una experiencia de compra de computadores personalizados, construyendo el prototipo y la librería del sistema de diseño.",
-        "La investigación y la propuesta inicial se realizaron en dupla con Lianna González durante el bootcamp de BIT. El desarrollo posterior del prototipo y la librería está fuera del entregable académico.",
-        "La propuesta conecta recomendaciones por uso y presupuesto, comparación de componentes y asesoría híbrida, a partir de entrevistas, benchmarking y preferencias expresadas en una encuesta."
-      ]
-    }
-  ],
+  "proyectos": [],
   "educacion": [
     {
-      "titulo": "Bootcamp Diseño UX/UI",
-      "institucion": "BIT - Bogotá Institute of Technology",
-      "periodo": "Septiembre 2025 - Enero 2026"
+      "titulo": "Diseño Industrial",
+      "institucion": "Pontificia Universidad Javeriana (Jorge Tadeo Lozano)",
+      "periodo": "2019"
     },
     {
-      "titulo": "Pregrado en Diseño Industrial y de Productos",
-      "institucion": "Fundación Universidad de Bogotá Jorge Tadeo Lozano",
-      "periodo": "2016 - 2019"
+      "titulo": "Bootcamp Diseño UX/UI",
+      "institucion": "BIT",
+      "periodo": "2026"
     }
   ],
   "certificaciones": [
     {
-      "nombre": "Métricas y Estrategias de Producto",
+      "nombre": "Programa Métricas y Estrategias de Producto",
       "entidad": "Repensar",
-      "fecha": "Septiembre 2026"
+      "fecha": "sep 2026"
     },
     {
       "nombre": "IA para UXers",
       "entidad": "Interface School",
-      "fecha": "Abril 2026"
+      "fecha": "abr 2026"
     },
     {
-      "nombre": "Creación de productos desde 0 con AI",
-      "entidad": "Coderhouse",
-      "fecha": "Abril 2026"
+      "nombre": "Gestión de Proyectos",
+      "entidad": "Certificado · Google / Coursera",
+      "fecha": "2025"
     },
     {
-      "nombre": "AI Fluency Framework & Foundations",
-      "entidad": "Anthropic",
-      "fecha": "Marzo 2026"
-    },
-    {
-      "nombre": "Gestión de Proyectos de Google",
-      "entidad": "Coursera",
-      "fecha": "Febrero 2025"
-    },
-    {
-      "nombre": "Investigación y Análisis de Tendencias para la Innovación",
-      "entidad": "360TrendLab",
-      "fecha": "Octubre 2024"
-    },
-    {
-      "nombre": "Introducción al Desarrollo Web front end: HTML y CSS desde cero",
-      "entidad": "Crehana",
-      "fecha": "Agosto 2020"
+      "nombre": "Diseño Conversacional & Prompt Engineering",
+      "entidad": "Capacitación · Multiplica",
+      "fecha": "2024"
     },
     {
       "nombre": "Scrum Master y Product Owner",
-      "entidad": "CertiProf",
-      "fecha": "Mayo 2020"
+      "entidad": "Certificado",
+      "fecha": "2020"
     }
   ],
   "idiomas": [
-    "Español: nativo",
+    "Español: Nativo",
     "Inglés: B2+"
   ]
 }
 ---
 
-Product Designer y diseñadora UX/UI con más de cinco años de experiencia en fintech, proptech y plataformas B2B. Conecto investigación, diseño de interfaces y análisis de comportamiento para resolver necesidades de usuarios y orientar decisiones de producto. He acompañado una plataforma de asesoría digital desde la investigación hasta producción, trabajando con negocio e ingeniería.
+Diseñadora UX/UI y Product Owner enfocada en crear **experiencias digitales con impacto medible**. Especializada en diseño de **plataformas fintech y herramientas B2B** que mejoran la eficiencia operativa. Combino investigación de usuarios, validación mediante pruebas de usabilidad y gestión estratégica de producto para asegurar que cada solución genere valor tangible. Mi enfoque colaborativo y orientación al usuario me permiten liderar proyectos complejos en equipos multidisciplinarios, desde la conceptualización hasta la iteración post-lanzamiento.
