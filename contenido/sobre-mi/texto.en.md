@@ -9,7 +9,7 @@
     "Product Designer",
     "UX/UI · Product Owner · Fintech & B2B"
   ],
-  "ubicacion": "Colombia",
+  "ubicacion": "Bogotá - Colombia",
   "telefono": "+57 350 528 7642",
   "correo": "valeria.garzont@gmail.com",
   "linkedin": "https://www.linkedin.com/in/valeria-garzon-triana-productdesigner/",
