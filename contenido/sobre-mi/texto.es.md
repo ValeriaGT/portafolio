@@ -111,19 +111,39 @@
   ],
   "certificaciones": [
     {
-      "nombre": "Programa Métricas y Estrategias de Producto",
+      "nombre": "Métricas y Estrategias de Producto",
       "entidad": "Repensar",
-      "fecha": "sep 2026"
+      "fecha": "Septiembre 2026"
     },
     {
       "nombre": "IA para UXers",
       "entidad": "Interface School",
-      "fecha": "abr 2026"
+      "fecha": "Abril 2026"
     },
     {
-      "nombre": "Gestión de Proyectos",
-      "entidad": "Certificado · Google / Coursera",
-      "fecha": "2025"
+      "nombre": "Creación de productos desde 0 con AI",
+      "entidad": "Coderhouse",
+      "fecha": "Abril 2026"
+    },
+    {
+      "nombre": "AI Fluency Framework & Foundations",
+      "entidad": "Anthropic",
+      "fecha": "Marzo 2026"
+    },
+    {
+      "nombre": "Gestión de Proyectos de Google",
+      "entidad": "Coursera",
+      "fecha": "Febrero 2025"
+    },
+    {
+      "nombre": "Gestión de proyectos con la metodología Agile",
+      "entidad": "Google",
+      "fecha": "Enero 2025"
+    },
+    {
+      "nombre": "Investigación y Análisis de Tendencias para la Innovación",
+      "entidad": "360TrendLab",
+      "fecha": "Octubre 2024"
     },
     {
       "nombre": "Diseño Conversacional & Prompt Engineering",
@@ -131,9 +151,19 @@
       "fecha": "2024"
     },
     {
+      "nombre": "Creación de presentaciones y prototipos interactivos en Adobe XD",
+      "entidad": "Green Know",
+      "fecha": "Julio 2022"
+    },
+    {
+      "nombre": "Introducción al Desarrollo Web front end: HTML y CSS desde cero",
+      "entidad": "Crehana",
+      "fecha": "Agosto 2020"
+    },
+    {
       "nombre": "Scrum Master y Product Owner",
-      "entidad": "Certificado",
-      "fecha": "2020"
+      "entidad": "CertiProf",
+      "fecha": "Mayo 2020"
     }
   ],
   "idiomas": [
