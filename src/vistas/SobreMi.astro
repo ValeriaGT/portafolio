@@ -132,6 +132,19 @@ const linkedinTexto = data.linkedin?.replace(/^https?:\/\/(www\.)?/, '').replace
         </ol>
       </section>
 
+      {data.proyectos.length > 0 && (
+        <section aria-labelledby="t-proyectos">
+          <h2 id="t-proyectos" class="rotulo">{idioma === 'es' ? 'Proyectos independientes' : 'Independent projects'}</h2>
+          {data.proyectos.map((proyecto) => (
+            <div>
+              <h3>{proyecto.titulo}</h3>
+              <p class="periodo">{proyecto.periodo}</p>
+              <p>{proyecto.descripcion}</p>
+            </div>
+          ))}
+        </section>
+      )}
+
       <section aria-labelledby="t-cert">
         <h2 id="t-cert" class="rotulo">{t.certificaciones}</h2>
         <ul class="certificaciones">

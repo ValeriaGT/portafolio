@@ -22,6 +22,7 @@ herramientas:
   - Lovable
   - Claude Code
   - Databricks
+  - Qualtrics
 habilidades:
   - grupo: Diseño
     items: UX/UI, diseño centrado en el usuario, wireframing, prototipado interactivo, diseño responsivo, journey mapping
@@ -30,26 +31,25 @@ habilidades:
   - grupo: Producto
     items: Product Owner, Scrum, Agile, gestión de backlog, priorización por impacto y esfuerzo
   - grupo: Front end
-    items: HTML, CSS, JavaScript, jQuery
+    items: HTML, CSS, JavaScript
   - grupo: IA
-    items: Prototipado asistido por IA (vibe coding), creación de productos con IA
+    items: Prototipado funcional asistido por IA, creación de productos con IA
 experiencia:
   - cargo: UX Diseñadora Web (Product Designer / Product Owner)
     empresa: Skandia Colombia
-    periodo: sep 2022 – actualidad
+    periodo: sep 2022 – oct 2026
     logros:
-      - Lideré la investigación de usuarios (UX research) y la validación de necesidades con asesores financieros para definir la estrategia del MVP de la plataforma de asesoría digital.
-      - Gestioné el backlog como Product Owner, priorizando funcionalidades por impacto y esfuerzo.
-      - Diseñé flujos, wireframes y prototipos interactivos en Figma y Claude Code para usuarios con distintos niveles de familiaridad tecnológica.
-      - Ejecuté pruebas de usabilidad con Maze y analicé los hallazgos en Dovetail para identificar fricción y optimizar flujos clave.
-      - Analicé en Databricks los datos de las experiencias digitales para identificar los puntos más críticos y definir por dónde empezar a iterar.
-      - Trabajé de la mano con los equipos de negocio y desarrollo para alinear las decisiones de diseño con los objetivos del producto.
-  - cargo: Diseñadora UX/UI
+      - Lideré la investigación para Go by Skandia con entrevistas a 10 asesores financieros y 10 clientes, y exploración de perfiles de finfluencers.
+      - Facilité un taller de necesidades y barreras con 12 usuarios y realicé pruebas de usabilidad del prototipo con 8 participantes en Maze.
+      - Diseñé flujos, wireframes y prototipos para asesores digitales y acompañé al equipo de desarrollo y a los usuarios durante el lanzamiento y las iteraciones en producción.
+      - Gestioné el backlog del MVP como Product Owner, priorizando por impacto y esfuerzo junto a negocio e ingeniería.
+      - Analicé seis meses de comportamiento del portal en Databricks y desarrollé una propuesta y un prototipo para facilitar la gestión de inversiones. La iniciativa quedó en revisión al terminar mi participación.
+  - cargo: Diseñadora UX/UI (Freelance)
     empresa: Nivelics SAS
     periodo: may 2022 – jun 2022
     logros:
       - Diseñé el portal de eventos completo (pantallas, flujos, wireframes y prototipos de alta fidelidad), con una experiencia más clara e intuitiva para los usuarios internos.
-      - Entregué prototipos que redujeron los tiempos de desarrollo y facilitaron la aprobación del cliente.
+      - Entregué prototipos de alta fidelidad para facilitar la revisión con el cliente y la implementación con desarrollo.
       - Mejoré la estructura visual del portal para identificar la información clave con mayor rapidez.
   - cargo: Diseñadora UI
     empresa: Metrocuadrado
@@ -65,6 +65,10 @@ experiencia:
       - "Construí desde cero, con HTML, CSS y JavaScript y sin plantillas, el sitio web oficial del museo: ligero, responsive y funcional."
       - Organicé la colección completa en una galería digital navegable y estructuré la información del artista.
       - Definí la estética y la narrativa visual junto al propietario del museo, fortaleciendo su identidad y presencia digital.
+proyectos:
+  - titulo: Catbyte · Prototipo y librería del sistema de diseño
+    periodo: En desarrollo · Iniciativa propia
+    descripcion: Continué por iniciativa propia el prototipo y la librería del sistema de diseño para una experiencia de compra de computadores personalizados. La investigación y la propuesta inicial se realizaron en dupla con Lianna González durante el bootcamp de BIT; esta continuación está fuera del entregable académico.
 educacion:
   - titulo: Bootcamp Diseño UX/UI
     institucion: BIT - Bogotá Institute of Technology
@@ -74,7 +78,7 @@ educacion:
     periodo: 2016 – 2019
 idiomas:
   - "Español: nativo"
-  - "Inglés: nivel profesional"
+  - "Inglés: B2+"
 certificaciones:
   - { nombre: Programa Métricas y Estrategias de Producto, entidad: Repensar, fecha: sep 2026 }
   - { nombre: IA para UXers, entidad: Interface School, fecha: abr 2026 }
@@ -84,11 +88,12 @@ certificaciones:
   - { nombre: Gestión de proyectos con la metodología Agile, entidad: Google, fecha: ene 2025 }
   - { nombre: Investigación y Análisis de Tendencias para la Innovación, entidad: 360TrendLab, fecha: oct 2024 }
   - { nombre: Creación de presentaciones y prototipos interactivos en Adobe XD, entidad: Green Know, fecha: jul 2022 }
+  - { nombre: "Introducción al Desarrollo Web front end: HTML y CSS desde cero", entidad: Crehana, fecha: ago 2020 }
   - { nombre: Scrum Master y Product Owner, entidad: CertiProf, fecha: may 2020 }
 ---
 
-Soy Product Designer y diseñadora UX/UI con más de 5 años de experiencia en fintech, proptech y plataformas B2B. Mi trabajo conecta lo que las personas necesitan con lo que el negocio busca lograr: investigo, organizo flujos, diseño interfaces y pruebo las propuestas con usuarios.
+Soy Product Designer y diseñadora UX/UI con más de cinco años de experiencia en fintech, proptech y plataformas B2B. Conecto investigación, diseño de interfaces y análisis de comportamiento para resolver necesidades de usuarios y orientar decisiones de producto.
 
-En Skandia participé desde la exploración del problema hasta el lanzamiento de una plataforma para asesores digitales. También analizo datos de comportamiento para identificar fricciones y orientar nuevas propuestas. Trabajo con negocio e ingeniería para convertir los hallazgos en decisiones de diseño y acompañar su implementación.
+En Skandia acompañé una plataforma de asesoría digital desde la investigación hasta producción, trabajando con negocio e ingeniería. También analicé seis meses de comportamiento del portal de inversiones y desarrollé una propuesta y un prototipo para facilitar la gestión de portafolios. Mi participación terminó en octubre de 2026, con esa iniciativa aún en revisión.
 
-Mi experiencia como Product Owner aporta criterio para priorizar y definir el alcance. Uso Figma y prototipado asistido por IA para explorar soluciones; la validación con usuarios es la que permite comprobar si funcionan.
+Mi experiencia como Product Owner aporta criterio para priorizar y definir el alcance. Uso Figma y prototipado asistido por IA para explorar soluciones, y pruebas con usuarios para evaluar su funcionamiento.
