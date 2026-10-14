@@ -72,7 +72,7 @@ if (casos.length && destacados.length < 2) avisar(`Inicio (${idioma}): hay ${des
 
 <style>
   /* La ilustración va dentro del contenedor: mismo margen a ambos lados que el texto.
-     Móvil y tablet: ilustración arriba y texto debajo. Desde 1200 px: dos columnas. */
+     Móvil y tablet: texto primero e imagen debajo, completa y compacta. Desde 1200 px: dos columnas. */
   .heroe {
     background: var(--marino);
     color: var(--blanco);
@@ -84,15 +84,14 @@ if (casos.length && destacados.length < 2) avisar(`Inicio (${idioma}): hay ${des
     padding-block: var(--e4) var(--e8);
   }
   .heroe-ilustracion {
-    order: -1;
+    order: 1;
     border-radius: var(--radio);
     overflow: hidden;
   }
   .heroe-ilustracion :global(img) {
     display: block;
     width: 100%;
-    height: auto;
-    max-height: none;
+    height: clamp(140px, 34vw, 200px);
     object-fit: contain;
     object-position: center;
   }
