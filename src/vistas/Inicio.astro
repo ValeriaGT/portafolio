@@ -72,7 +72,7 @@ if (casos.length && destacados.length < 2) avisar(`Inicio (${idioma}): hay ${des
 
 <style>
   /* La ilustración va dentro del contenedor: mismo margen a ambos lados que el texto.
-     Móvil y tablet: texto primero e imagen debajo, completa y compacta. Desde 1200 px: dos columnas. */
+     Se oculta en celular y acompaña la descripción en pantallas desde tablet. */
   .heroe {
     background: var(--marino);
     color: var(--blanco);
@@ -84,14 +84,13 @@ if (casos.length && destacados.length < 2) avisar(`Inicio (${idioma}): hay ${des
     padding-block: var(--e4) var(--e8);
   }
   .heroe-ilustracion {
-    order: 1;
     border-radius: var(--radio);
     overflow: hidden;
   }
   .heroe-ilustracion :global(img) {
     display: block;
     width: 100%;
-    height: clamp(140px, 34vw, 200px);
+    height: clamp(150px, 24vw, 270px);
     object-fit: contain;
     object-position: center;
   }
@@ -122,6 +121,20 @@ if (casos.length && destacados.length < 2) avisar(`Inicio (${idioma}): hay ${des
     color: var(--lavanda);
     border-left: 3px solid var(--morado);
     padding-left: var(--e2);
+  }
+  @media (max-width: 767px) {
+    .heroe-ilustracion {
+      display: none;
+    }
+  }
+  @media (min-width: 768px) {
+    .heroe-rejilla {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(160px, 0.72fr);
+      align-items: center;
+      gap: var(--e5);
+      padding-block: var(--e6);
+    }
   }
   @media (min-width: 1200px) {
     .heroe-rejilla {
