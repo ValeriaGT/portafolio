@@ -5,7 +5,7 @@ import Base from '../layouts/Base.astro';
 import { textos, type Idioma } from '../i18n/textos';
 import { sobreMiDe, avisar } from '../lib/contenido';
 import IconoContacto from '../components/IconoContacto.astro';
-import { foto, hojaDeVida } from '../lib/archivos';
+import { foto, hojaDeVida, cvATS } from '../lib/archivos';
 
 interface Props {
   idioma: Idioma;
@@ -16,6 +16,7 @@ const entrada = await sobreMiDe(idioma);
 const { data } = entrada;
 const { Content } = await render(entrada);
 const pdf = hojaDeVida(idioma);
+const pdfATS = cvATS(idioma);
 if (!pdf) avisar(`sobre-mi: falta contenido/sobre-mi/hoja-de-vida.${idioma}.pdf`);
 if (!foto) avisar('sobre-mi: falta contenido/sobre-mi/foto.jpg');
 const telefonoHref = data.telefono ? `tel:${data.telefono.replace(/[^\d+]/g, '')}` : undefined;
@@ -49,13 +50,20 @@ const linkedinTexto = data.linkedin?.replace(/^https?:\/\/(www\.)?/, '').replace
       </div>
 
       {
-        pdf ? (
-          <a class="boton boton-primario cv" href={pdf} download={`Valeria-Garzon-${idioma === 'es' ? 'Hoja-de-vida' : 'Resume'}.pdf`}>
-            ↓ {t.descargarCV}
-          </a>
-        ) : (
-          <p class="pendiente">{t.descargarCV} {t.pendiente}</p>
-        )
+        <div class="descargas-cv">
+          {pdf ? (
+            <a class="boton boton-primario cv" href={pdf} download={`Valeria-Garzon-${idioma === 'es' ? 'Hoja-de-vida-visual' : 'Visual-Resume'}.pdf`}>
+              ↓ {t.descargarCV}
+            </a>
+          ) : (
+            <p class="pendiente">{t.descargarCV} {t.pendiente}</p>
+          )}
+          {pdfATS && (
+            <a class="boton boton-secundario cv" href={pdfATS} download={`Valeria-Garzon-${idioma === 'es' ? 'CV-ATS' : 'Resume-ATS'}.pdf`}>
+              ↓ {t.descargarATS}
+            </a>
+          )}
+        </div>
       }
     </aside>
 
@@ -266,6 +274,11 @@ const linkedinTexto = data.linkedin?.replace(/^https?:\/\/(www\.)?/, '').replace
   .cv {
     justify-content: center;
     text-align: center;
+  }
+  .descargas-cv {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e2);
   }
   .lateral .rotulo {
     margin-bottom: var(--e2);

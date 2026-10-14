@@ -18,3 +18,11 @@ const pdfs = import.meta.glob<string>('/contenido/sobre-mi/hoja-de-vida.{es,en}.
 });
 export const hojaDeVida = (idioma: 'es' | 'en'): string | undefined =>
   pdfs[`/contenido/sobre-mi/hoja-de-vida.${idioma}.pdf`];
+
+const pdfsATS = import.meta.glob<string>('/contenido/sobre-mi/cv-ats.{es,en}.pdf', {
+  eager: true,
+  query: '?url',
+  import: 'default',
+});
+export const cvATS = (idioma: 'es' | 'en'): string | undefined =>
+  pdfsATS[`/contenido/sobre-mi/cv-ats.${idioma}.pdf`];
