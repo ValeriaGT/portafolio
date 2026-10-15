@@ -10,6 +10,7 @@ periodo: Sep – Dec 2025
 equipo: Valeria Garzón and Lianna González
 portada: ./01-portada.jpg
 portadaAlt: Catbyte project cover, with the logo of a cat biting a game controller and the names Valeria Garzón and Lianna González.
+prototipo: https://catbyte.vercel.app/personaliza
 destacado: true
 borrador: false
 orden: 3
